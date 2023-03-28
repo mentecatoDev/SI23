@@ -1,0 +1,1857 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../01_introduccion_sistemas_informaticos/" rel="prev"/>
+<link href="../03_virtualizacion/" rel="next"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.1.4" name="generator"/>
+<title>Introducción a los Sistemas Operativos - obsidian-mkdocs template</title>
+<link href="../../assets/stylesheets/main.240905d7.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="pink" data-md-color-scheme="default" dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#introduccion-a-los-sistemas-operativos">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="obsidian-mkdocs template" class="md-header__button md-logo" data-md-component="logo" href="../.." title="obsidian-mkdocs template">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            obsidian-mkdocs template
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Introducción a los Sistemas Operativos
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="pink" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="blue" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="pink" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"></path></svg>
+</label>
+</form>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="obsidian-mkdocs template" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="obsidian-mkdocs template">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+    obsidian-mkdocs template
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        Obsidian Notes
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Features
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Features
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Features/LaTeX%20Math%20Support/">
+        LaTeX Math Support
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Features/Mermaid%20Diagrams/">
+        Mermaid diagrams
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Features/Text%20Formatting/">
+        Text Formatting
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Topic 1
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Topic 1
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Topic%201/Note%201/">
+        Note 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Topic%201/Note%202/">
+        Note 2
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Docs
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Docs
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../">
+        Sistemas Informáticos
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../01_introduccion_sistemas_informaticos/">
+        Introducción a los Sistemas Informáticos
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Introducción a los Sistemas Operativos
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Introducción a los Sistemas Operativos
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#software">
+    Software
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#software-propietario-y-software-libre">
+    Software Propietario y Software Libre
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#clasificacion-del-software">
+    Clasificación del Software
+  </a>
+<nav aria-label="Clasificación del Software" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#software-de-base">
+    Software de base
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#software-de-programacion">
+    Software de programación
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#software-de-aplicacion">
+    Software de aplicación
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#licencias-de-software">
+    Licencias de Software
+  </a>
+<nav aria-label="Licencias de Software" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tipos-de-licencias-genericas">
+    Tipos de licencias genéricas
+  </a>
+<nav aria-label="Tipos de licencias genéricas" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gnugpl-gnu-is-not-unixgeneral-public-license">
+    GNU/GPL (GNU is Not Unix/General Public License)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bsd-berkeley-software-distribution">
+    BSD (Berkeley Software Distribution)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mpl-mozilla-public-license">
+    MPL (Mozilla Public License)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#copyleft">
+    Copyleft
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#apache">
+    Apache
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tipos-de-licencias-de-sistemas-operativos">
+    Tipos de licencias de Sistemas Operativos
+  </a>
+<nav aria-label="Tipos de licencias de Sistemas Operativos" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#licencia-eula-licencia-de-usuario-final">
+    Licencia EULA (licencia de usuario final)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#licencia-gnugpl">
+    Licencia GNU/GPL
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#distribucion-de-licencias-propietarias">
+    Distribución de licencias propietarias
+  </a>
+<nav aria-label="Distribución de licencias propietarias" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#retail">
+    Retail
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#oem-original-equipment-manufacturer">
+    OEM (Original Equipment Manufacturer)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vlm-volume-license-manager">
+    VLM (Volume License Manager)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#msdn">
+    MSDN
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sistemas-operativos-actuales">
+    Sistemas Operativos Actuales
+  </a>
+<nav aria-label="Sistemas Operativos Actuales" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduccion">
+    Introducción
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sistemas-operativos-linux">
+    Sistemas Operativos Linux
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sistemas-operativos-android">
+    Sistemas operativos Android
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sistemas-operativos-windows">
+    Sistemas Operativos Windows
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sistemas-operativos-os">
+    Sistemas operativos OS
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#otros-sistemas-operativos">
+    Otros sistemas operativos
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#clasificacion-de-los-sistemas-operativos">
+    Clasificación de los Sistemas Operativos
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#principales-funciones-de-los-sistemas-operativos">
+    Principales funciones de los Sistemas Operativos
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gestion-de-procesos">
+    Gestión de procesos
+  </a>
+<nav aria-label="Gestión de procesos" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduccion_1">
+    Introducción
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conceptos-basicos">
+    Conceptos básicos.
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tipos-de-algoritmos">
+    Tipos de algoritmos.
+  </a>
+<nav aria-label="Tipos de algoritmos." class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fcfs-first-come-first-served">
+    FCFS (First-Come, First-Served)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sjf-shortest-job-first">
+    SJF (Shortest Job First)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#srtf-short-remaining-time-next">
+    SRTF (Short Remaining Time Next)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#round-robin">
+    Round Robin
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gestion-de-memoria">
+    Gestión de Memoria
+  </a>
+<nav aria-label="Gestión de Memoria" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#problemas-con-la-memoria">
+    Problemas con la memoria
+  </a>
+<nav aria-label="Problemas con la memoria" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#relocalizacion">
+    Relocalización
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#proteccion">
+    Protección
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#memoria-virtual">
+    Memoria virtual
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sistema-de-ficheros-fs-file-system">
+    Sistema de Ficheros (FS.- File System)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#capas">
+    Capas
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#capas_1">
+    Capas
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../03_virtualizacion/">
+        Arranque de un Sistema Operativo
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+          Docker
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_5">
+<span class="md-nav__icon md-icon"></span>
+          Docker
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../docker/00_TOC/">
+        00 TOC
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../docker/01_que_es/">
+        ¿Qué es Docker y para qué se utiliza? [[1](http://apuntes.ucr.ac.cr/index.php/Docker,_aplicaciones_en_cualquier_parte)]
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../docker/02_instalacion/">
+        [Instalación de Docker](http://apuntes.ucr.ac.cr/index.php/Docker,_aplicaciones_en_cualquier_parte)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../docker/03_conceptos_clave/">
+        Conceptos clave
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../docker/Docker%20en%20python%20y%20django/">
+        Docker en python y django
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../docker/capas/">
+        Capas
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../docker/contenedores/">
+        Contenedores
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../docker/docker_hub/">
+        Docker hub
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../docker/gestion_imagenes/">
+        Gestion imagenes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../docker/imagenes/">
+        Imágenes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../docker/instalacion_del_plugin_en_ZSH/">
+        instalacion del plugin en ZSH
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../docker/introduccion/">
+        Introducción
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../docker/redes/">
+        Redes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../docker/volumenes/">
+        Volúmenes
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#software">
+    Software
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#software-propietario-y-software-libre">
+    Software Propietario y Software Libre
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#clasificacion-del-software">
+    Clasificación del Software
+  </a>
+<nav aria-label="Clasificación del Software" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#software-de-base">
+    Software de base
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#software-de-programacion">
+    Software de programación
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#software-de-aplicacion">
+    Software de aplicación
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#licencias-de-software">
+    Licencias de Software
+  </a>
+<nav aria-label="Licencias de Software" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tipos-de-licencias-genericas">
+    Tipos de licencias genéricas
+  </a>
+<nav aria-label="Tipos de licencias genéricas" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gnugpl-gnu-is-not-unixgeneral-public-license">
+    GNU/GPL (GNU is Not Unix/General Public License)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bsd-berkeley-software-distribution">
+    BSD (Berkeley Software Distribution)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mpl-mozilla-public-license">
+    MPL (Mozilla Public License)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#copyleft">
+    Copyleft
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#apache">
+    Apache
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tipos-de-licencias-de-sistemas-operativos">
+    Tipos de licencias de Sistemas Operativos
+  </a>
+<nav aria-label="Tipos de licencias de Sistemas Operativos" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#licencia-eula-licencia-de-usuario-final">
+    Licencia EULA (licencia de usuario final)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#licencia-gnugpl">
+    Licencia GNU/GPL
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#distribucion-de-licencias-propietarias">
+    Distribución de licencias propietarias
+  </a>
+<nav aria-label="Distribución de licencias propietarias" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#retail">
+    Retail
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#oem-original-equipment-manufacturer">
+    OEM (Original Equipment Manufacturer)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vlm-volume-license-manager">
+    VLM (Volume License Manager)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#msdn">
+    MSDN
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sistemas-operativos-actuales">
+    Sistemas Operativos Actuales
+  </a>
+<nav aria-label="Sistemas Operativos Actuales" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduccion">
+    Introducción
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sistemas-operativos-linux">
+    Sistemas Operativos Linux
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sistemas-operativos-android">
+    Sistemas operativos Android
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sistemas-operativos-windows">
+    Sistemas Operativos Windows
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sistemas-operativos-os">
+    Sistemas operativos OS
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#otros-sistemas-operativos">
+    Otros sistemas operativos
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#clasificacion-de-los-sistemas-operativos">
+    Clasificación de los Sistemas Operativos
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#principales-funciones-de-los-sistemas-operativos">
+    Principales funciones de los Sistemas Operativos
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gestion-de-procesos">
+    Gestión de procesos
+  </a>
+<nav aria-label="Gestión de procesos" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduccion_1">
+    Introducción
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conceptos-basicos">
+    Conceptos básicos.
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tipos-de-algoritmos">
+    Tipos de algoritmos.
+  </a>
+<nav aria-label="Tipos de algoritmos." class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fcfs-first-come-first-served">
+    FCFS (First-Come, First-Served)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sjf-shortest-job-first">
+    SJF (Shortest Job First)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#srtf-short-remaining-time-next">
+    SRTF (Short Remaining Time Next)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#round-robin">
+    Round Robin
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gestion-de-memoria">
+    Gestión de Memoria
+  </a>
+<nav aria-label="Gestión de Memoria" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#problemas-con-la-memoria">
+    Problemas con la memoria
+  </a>
+<nav aria-label="Problemas con la memoria" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#relocalizacion">
+    Relocalización
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#proteccion">
+    Protección
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#memoria-virtual">
+    Memoria virtual
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sistema-de-ficheros-fs-file-system">
+    Sistema de Ficheros (FS.- File System)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#capas">
+    Capas
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#capas_1">
+    Capas
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="introduccion-a-los-sistemas-operativos">Introducción a los Sistemas Operativos<a class="headerlink" href="#introduccion-a-los-sistemas-operativos" title="Permanent link">¶</a></h1>
+<h2 id="software">Software<a class="headerlink" href="#software" title="Permanent link">¶</a></h2>
+<p>Tal  y  como  se  define en  el  Diccionario  de  la  lengua  española,  de  la  Real Academia (DRAE), el software es el  <strong>«conjunto de programas, instrucciones y reglas informáticas para ejecutar ciertas tareas en una computadora»</strong>.  </p>
+<p>Según  el  estándar  729  del  IEEE,  el  software  es  <strong>«el  conjunto  de  los  programas  de cómputo, procedimientos, reglas, documentación y datos asociados que forman parte de  las  operaciones  de  un  sistema  de  computación»</strong>,  lo  que  concreta  la  definición anterior.  </p>
+<p>Así  pues,  podemos  afirmar  que  el  software  es  la  parte  lógica  de  un  ordenador,  a diferencia de la parte física, a la que denominamos hardware. </p>
+<h2 id="software-propietario-y-software-libre">Software Propietario y Software Libre<a class="headerlink" href="#software-propietario-y-software-libre" title="Permanent link">¶</a></h2>
+<p>Es importante dejar clara la diferencia que existe entre el software libre y el software propietario.  </p>
+<p>El  <strong>software libre</strong> permite a los  <strong>usuarios</strong> que lo adquieren  <strong>trabajar con toda la libertad sobre él, pudiendo usarlo, copiarlo, estudiarlo, modificarlo y distribuirlo de nuevo una vez  modificado</strong>,  y  así  lo  indica  la  Fundación  para  el Software Libre (Free Software Foundation).  </p>
+<p>Esto no implica expresamente que el software sea gratuito, sino que lo es el uso que se le puede dar una vez adquirido, bien sea previo pago, o bien gratuitamente. </p>
+<p>Lo  contrario  es  el  software  propietario,  cuyas  limitaciones  para  el  usuario  que  lo adquiere  son  la  de  copia,  modificación  o  distribución;  tanto  modificado  como  no modificado. </p>
+<p>Según la Fundación para el Software Libre, el software propietario es cualquiera que no cumpla todas las condiciones del software libre. </p>
+<p>Precisamente, se denominan  «cuatro libertades» aquellas que cumple por completo el software libre, y son las siguientes: </p>
+<ul>
+<li><strong>Libertad 0:</strong> libertad para utilizar el programa con cualquier propósito. </li>
+<li><strong>Libertad 1:</strong>  libertad para estudiar el funcionamiento del programa y adaptarlo a las necesidades del usuario. </li>
+<li><strong>Libertad 2:</strong> libertad para distribuir copias del programa. </li>
+<li><strong>Libertad  3:</strong>  libertad  para  modificar  el  programa,  mejorándolo  y  haciendo  públicas estas mejoras al resto de usuarios, para beneficio de toda la comunidad. </li>
+</ul>
+<p>Obviamente, para poder llevar a cabo las libertades que implican la modificación del programa,  es  necesario  disponer  del  código  fuente,  por  lo  que  éste  se  tiene  que distribuir para que sea considerado software libre. </p>
+<p>Es muy importante no confundir el término software libre (free software) con “freeware” que es un tipo de software que se distribuye sin costo alguno pero que mantiene su licencia  (copyright),  por  lo  que  no  puede  modificarse  o  utilizar  libremente  como  sí puede hacerse con el software libre; en ocasiones se trata de una versión reducida de un programa más completo de pago. El freeware es una variante gratuita del shareware, el cual es un tipo de software de evaluación, el cual tiene una limitación en el tiempo de uso o en algunas de sus funciones para que el usuario pueda probarlo y si le gusta, lo compre habilitando toda su funcionalidad. </p>
+<h2 id="clasificacion-del-software">Clasificación del Software<a class="headerlink" href="#clasificacion-del-software" title="Permanent link">¶</a></h2>
+<p>El  software  podemos  clasificarlo  principalmente  en  los  siguientes  tipos  según  su finalidad: </p>
+<h3 id="software-de-base">Software de base<a class="headerlink" href="#software-de-base" title="Permanent link">¶</a></h3>
+<p>El  software  de  base,  también  denominado  «software  de  sistema»,  <strong>es  aquel  que  nos permite interactuar directamente con el hardware de nuestro equipo,</strong> actuando como mediador entre el software de aplicaciones y el hardware del sistema.  </p>
+<p>Dentro  del  software  de  base  podemos  hacer  una  nueva  clasificación,  donde  se encuentran los siguientes tipos de software: </p>
+<ul>
+<li><strong>Sistemas Operativos:</strong>  son  una  parte  esencial  en  el  equipo, ya  que  se  encargan  de gestionarlo todo para que su uso resulte sencillo y efectivo para el usuario. </li>
+<li><strong>Controladores  de  dispositivo:</strong>  proporcionan  al  sistema  operativo  instrucciones concretas para interactuar con los dispositivos que tiene instalados el equipo. </li>
+<li><strong>Herramientas  de  diagnóstico  y  optimización:</strong>  se  encargan  de  recoger  valores  de parámetros  del  sistema  y,  si  procede,  corregirlos  para  garantizar  el  buen funcionamiento de este.</li>
+</ul>
+<h3 id="software-de-programacion">Software de programación<a class="headerlink" href="#software-de-programacion" title="Permanent link">¶</a></h3>
+<p>Se denomina así al conjunto de aplicaciones mediante las cuales <strong>un programador puede desarrollar sus programas informáticos.</strong> </p>
+<p>Al  igual  que  en  el  caso  anterior,  cuando  hablamos  de  este  tipo  de  software  nos referimos  a  editores  de  texto,  compiladores,  depuradores,  entornos  de  desarrollo integrados (IDE), etc.   </p>
+<h3 id="software-de-aplicacion">Software de aplicación<a class="headerlink" href="#software-de-aplicacion" title="Permanent link">¶</a></h3>
+<p>Se clasifican como software de aplicación aquellos programas que <strong>permiten al usuario realizar tareas específicas en el sistema.</strong></p>
+<p>Este tipo de software incluye las aplicaciones ofimáticas, software dedicado (educativo, médico, empresarial, etc.), aplicaciones de automatización y control industrial, software de diseño gráfico y multimedia, etc.</p>
+<h2 id="licencias-de-software">Licencias de Software<a class="headerlink" href="#licencias-de-software" title="Permanent link">¶</a></h2>
+<h3 id="tipos-de-licencias-genericas">Tipos de licencias genéricas<a class="headerlink" href="#tipos-de-licencias-genericas" title="Permanent link">¶</a></h3>
+<p>El software, con independencia del tipo que sea, lleva asociado un tipo de licencia, que establece las condiciones en las que se publica, sus garantías y concesiones. </p>
+<p>Una misma aplicación puede distribuirse con distintas licencias; por ello, estaríamos hablando de aplicaciones diferentes, puesto que la licencia no es la misma. </p>
+<p>La multilicencia se emplea para permitir que una aplicación tenga una vertiente libre, generalmente bajo varias licencias libres, y otra propietaria. </p>
+<p>Por  un  lado,  tenemos  el  software  privativo  con  un  copyright  con  un  conjunto  de restricciones reflejadas en el contrato que se firma entre el licenciante y el usuario del software.  De  forma  general,  este  software  no  puede  usarse  libremente,  no  puede compartirse,  no  puede  accederse  a  su  código  fuente  y  no  puede  estudiarse  ni modificarse. </p>
+<p>Las  licencias  existentes  de  software  libre  son  muchísimas,  podemos  destacar  entre ellas: </p>
+<h4 id="gnugpl-gnu-is-not-unixgeneral-public-license"><strong>GNU/GPL (GNU is Not Unix/General Public License)</strong><a class="headerlink" href="#gnugpl-gnu-is-not-unixgeneral-public-license" title="Permanent link">¶</a></h4>
+<p>Este tipo de licencia está representada por Linux, y es la más conocida en el mundo del software libre.  Permite  tanto  la  distribución  de  la  aplicación  como  la de su código fuente. En el caso de que únicamente se distribuyera la aplicación, debe ser posible acceder  a  sus  fuentes  igualmente.  Del mismo modo,  permite  realizar modificaciones, integrando código GPL.</p>
+<p><img alt="" src="SI23/docs/docs/img02/01.png"/></p>
+<p>El objetivo de este tipo de licencia es asegurar la libertad del código, de modo  que  incluso  las modificaciones realizadas han de ser distribuidas bajo la misma licencia, y no se pueden incluir partes de código patentadas si la patente no  está  liberada.  Además,  suelen  incluir  un  archivo  con  un  historial  en  el  cual  se recogen tanto las modificaciones efectuadas, como los autores involucrados en ellas. </p>
+<p>Una variante es la licencia LGPL (<em>Lesser GPL</em>), que permite utilizar  aplicaciones  libres  con  software  propietario,  de modo  que  la  aplicación  es  distribuida  como  si  tuviera licencia  GPL, pero  puede  integrarse  con  otro  tipo  de software prácticamente sin limitaciones. Suele usarse para bibliotecas de programas, más que para programas ejecutables.</p>
+<p><img alt="" src="SI23/docs/docs/img02/02.png"/></p>
+<h4 id="bsd-berkeley-software-distribution"><strong>BSD (<em>Berkeley Software Distribution</em>)</strong><a class="headerlink" href="#bsd-berkeley-software-distribution" title="Permanent link">¶</a></h4>
+<p>Es una licencia que suele ser usada por los Sistemas BSD, que son sistemas operativos basados en Unix. Esta licencia al contrario que la GPL permite el uso del código fuente en software privativo. </p>
+<p><img alt="" src="SI23/docs/docs/img02/03.png"/></p>
+<p>Es una licencia poco restrictiva, ya que permite distribuir la aplicación y el código fuente para ser modificados e integrados con otros programas; sin embargo, y a diferencia de otros tipos, en esta se da crédito a los autores. </p>
+<p>La  utilizan  los  desarrolladores  para  crear  aplicaciones  compatibles  basadas  en  una aplicación ya existente con licencia BSD. </p>
+<p>Como curiosidad, saber que el S.O. macOS está basado en el sistema operativo BSD.</p>
+<h4 id="mpl-mozilla-public-license"><strong>MPL (Mozilla Public License)</strong><a class="headerlink" href="#mpl-mozilla-public-license" title="Permanent link">¶</a></h4>
+<p>Esta licencia fue creada por Netscape Communications para su navegador Netscape, y fue la primera con origen en una empresa, con el tiempo el control de esta licencia fue tomado por la Fundación Mozilla.</p>
+<p><img alt="" src="SI23/docs/docs/img02/04.png"/></p>
+<p>Permite  copiar,  modificar  y distribuir ilimitadamente una aplicación, sin  restringir  el  código  ni  la  licencia,  dando  la  posibilidad  a  los desarrolladores  de  liberar  el  código  sin  perder  el  control  sobre sus creaciones o versiones; por lo que <strong>cumple con las cuatro libertades del software</strong>. </p>
+<p>Se  usa  principalmente  como  licencia  para  aplicaciones  de  Mozilla,  como  son  Firefox (navegador) o Thunderbird (gestor de correo), aunque también la usan otros programas como LibreOffice 4.0. </p>
+<h4 id="copyleft"><strong>Copyleft</strong><a class="headerlink" href="#copyleft" title="Permanent link">¶</a></h4>
+<p>En este tipo de licencia, el propietario autoriza a copiar, modificar y distribuir, pero no permite agregar restricciones a la redistribución o modificación, que deben mantener el mismo tipo de licencia. </p>
+<p><img alt="" src="SI23/docs/docs/img02/05.png"/></p>
+<h4 id="apache"><strong>Apache</strong><a class="headerlink" href="#apache" title="Permanent link">¶</a></h4>
+<p>Licencia creada por Apache Software Foundation para  su  software,  aunque  en  realidad  hay muchos otros que hacen uso de ella.</p>
+<p><img alt="" src="SI23/docs/docs/img02/06.png"/></p>
+<p>Permite al usuario el uso sin restricciones,la distribución y la modificación. Sin embargo, no es copyleft ya que no exige que la distribución y las obras derivadas mantengan la licencia original. De esta manera, es posible que un software abierto en origen pueda convertirse en un software cerrado aplicando esta licencia. </p>
+<h3 id="tipos-de-licencias-de-sistemas-operativos">Tipos de licencias de Sistemas Operativos<a class="headerlink" href="#tipos-de-licencias-de-sistemas-operativos" title="Permanent link">¶</a></h3>
+<p>En el caso de los sistemas operativos, predominan dos tipos de licencias: la licencia EULA (Windows) y la licencia GNU/GPL (Linux). </p>
+<h4 id="licencia-eula-licencia-de-usuario-final">Licencia EULA (licencia de usuario final)<a class="headerlink" href="#licencia-eula-licencia-de-usuario-final" title="Permanent link">¶</a></h4>
+<p>Con esta licencia el producto solo puede ser utilizado por el usuario que lo ha adquirido. De  este  modo,  el  dueño  del  producto  obliga  al  usuario  final  a  reconocer  todas  las condiciones de la licencia, tales como las restricciones de uso, los derechos de autor y las  patentes,  así  como  la  posibilidad  de  que  el  propietario  recoja  información  del sistema y su uso. </p>
+<p>Esta licencia prohíbe la copia, y solo puede ser transferida una vez a otro usuario. Puede utilizarse solo en un equipo con un máximo de dos procesadores, que no sea servidor web ni de archivos. </p>
+<p>Si se efectúan cambios de hardware, puede dejar de funcionar y el usuario debe activar la licencia antes de 30 días desde su instalación. Tiene una garantía de 90 días, y no cubre las actualizaciones. </p>
+<p>Una de las polémicas de EULA es que el usuario en ningún momento es dueño del producto, únicamente dispone de una licencia de uso.</p>
+<h4 id="licencia-gnugpl">Licencia GNU/GPL<a class="headerlink" href="#licencia-gnugpl" title="Permanent link">¶</a></h4>
+<p>Se  trata  de  la  primera  licencia  copyleft  de  uso  general,  lo  que  significa  que  las modificaciones realizadas sobre este tipo de software deben ser distribuidas bajo los términos de la misma licencia GNU/GPL. </p>
+<p>Permite  la  copia,  modificación y  redistribución  de  software,  proporcionando  garantía sobre los derechos del usuario tanto de copia como de modificación y redistribución. Garantiza a los usuarios los derechos del software libre, aunque el  trabajo sea modificado. </p>
+<p>Una patente sobre este tipo de software debe ser licenciada para el beneficio de la comunidad, y esta modificación no debe tener en ningún caso costo por la licencia. Además, debe incluir el código fuente del software desarrollado para dar al usuario la posibilidad de su modificación posterior, si así lo deseara.</p>
+<h3 id="distribucion-de-licencias-propietarias">Distribución de licencias propietarias<a class="headerlink" href="#distribucion-de-licencias-propietarias" title="Permanent link">¶</a></h3>
+<h4 id="retail">Retail<a class="headerlink" href="#retail" title="Permanent link">¶</a></h4>
+<p>Está destinada a su venta directa al usuario final, aunque no está limitada a su equipo de destino, podemos venderla o cederla si desinstalamos el software de nuestro equipo. Sólo permite el uso en una sola máquina a la vez, se vende con su caja y manuales. El soporte técnico corre a cargo del fabricante.</p>
+<h4 id="oem-original-equipment-manufacturer">OEM (Original Equipment Manufacturer)<a class="headerlink" href="#oem-original-equipment-manufacturer" title="Permanent link">¶</a></h4>
+<p>Se encuentra ligada al equipo nuevo que se ha adquirido. No es posible vender/ceder la versión si no es con él. Es más barata que la licencia Retail, y el soporte técnico corre a cuenta  del  vendedor del  equipo.  Si el vendedor  nos  proporciona el software ya preinstalado en el equipo estaríamos hablando de licencia OEM por lotes. </p>
+<h4 id="vlm-volume-license-manager">VLM (Volume License Manager)<a class="headerlink" href="#vlm-volume-license-manager" title="Permanent link">¶</a></h4>
+<p>Son las llamadas licencias por volumen y son una variante de la licencia OEM. Para una empresa con cientos de ordenadores, es complicado controlar las licencias individuales de cada una de sus máquinas. Existe la posibilidad de contratar un tipo de licencia especial con el desarrollador, de modo que, con una única clave de licencia, podemos utilizar varias máquinas a la vez. </p>
+<h4 id="msdn">MSDN<a class="headerlink" href="#msdn" title="Permanent link">¶</a></h4>
+<p>Son licencias especiales para un uso educativo, por lo que siempre deben activarse en equipos que tengan una finalidad didáctica. También existen variantes para empresas de desarrollo, academias, etc.</p>
+<h2 id="sistemas-operativos-actuales">Sistemas Operativos Actuales<a class="headerlink" href="#sistemas-operativos-actuales" title="Permanent link">¶</a></h2>
+<h3 id="introduccion">Introducción<a class="headerlink" href="#introduccion" title="Permanent link">¶</a></h3>
+<p>En  este  apartado,  abordaremos  los  principales  sistemas  operativos  que  existen actualmente en el mercado. No vamos a ceñirnos solamente en los sistemas operativos para equipos  de  sobremesa,  sino  que  también abordaremos  sistemas  operativos de dispositivos móviles. Pero antes de clasificarlos, vamos a estudiar qué es, cómo es y qué hace un sistema operativo. </p>
+<p>El sistema operativo es el conjunto de programas del sistema informático que controla los recursos hardware del ordenador y sirve de base para la ejecución de los programas de aplicación o de programación, se le considera el intermediario entre el hardware y los programas y usuarios.</p>
+<p>Primero, vamos a realizar una <strong>clasificación de los Sistemas operativos en función de su desarrollador:</strong></p>
+<h3 id="sistemas-operativos-linux">Sistemas Operativos Linux<a class="headerlink" href="#sistemas-operativos-linux" title="Permanent link">¶</a></h3>
+<p>Los sistemas operativos Linux están desarrollados bajo la licencia GPL, por lo que se trata de un software libre, cuyo grado de libertad debe mantenerse en las diferentes distribuciones  de  este  software.  Estos  sistemas  están  desarrollados por una gran comunidad de empresas, asociaciones, colectivos e, incluso, por personas particulares. </p>
+<p>La base de este tipo de sistema es su núcleo o kernel. Partiendo de diferentes versiones del kernel junto con las evoluciones que se le integran, dan lugar a una enorme variedad de distribuciones. Actualmente pueden existir más de 500 distribuciones diferentes de Linux. En <a href="https://distrowatch.com">Distrowatch</a> puedes ver las más importantes.</p>
+<p>Las versiones sobre las que se sustentan la mayoría de distribuciones Linux actuales son: </p>
+<ul>
+<li>Slackware: slackware Linux, Open SUSE, Slax, Vector Linux, etc. </li>
+<li>Red Hat: Red hat Linux, CentOS, Mandriva, Fedora, etc. </li>
+<li>Debian: debian, Ubuntu, Knoppix, Linux Mint, etc.</li>
+<li>Arch: Manjaro, Endevour, Arcolinux, Garuda, etc.</li>
+</ul>
+<h3 id="sistemas-operativos-android">Sistemas operativos Android<a class="headerlink" href="#sistemas-operativos-android" title="Permanent link">¶</a></h3>
+<p>Este sistema es,  en  realidad,  una  distribución  de  Linux.  Diseñado  para  dispositivos móviles,  por  lo  que  se  ha  diseñado  para  arquitecturas  de  equipos ARM,  aunque  hay algunas distribuciones adaptadas a x86.</p>
+<p>Las  distribuciones  de Android  son  únicas  para  todos  los  dispositivos  a  los  que  van dirigidas,  pero  en  función  del  dispositivo  (móvil,  Tablet, smartwatch,  etc)  usará  una versión u otra.</p>
+<p>Android es desarrollado por Google, con el respaldo de la Open Handset Alliance, que es una  agrupación  de  compañías  para  el  desarrollo  de  estándares abiertos para dispositivos móviles. </p>
+<p>Los  nombres  de  las  versiones  de  Android  se  corresponden  con  golosinas  o  dulces, siendo la última versión conocida la Snow Cone (Android 12) lanzada en noviembre de 2022. </p>
+<h3 id="sistemas-operativos-windows">Sistemas Operativos Windows<a class="headerlink" href="#sistemas-operativos-windows" title="Permanent link">¶</a></h3>
+<p>Los sistemas operativos Windows se corresponden con una familia de distribuciones desarrolladas por la compañía Microsoft. Todos estos SS.OO. se distribuyen bajo licencia Microsoft  EULA  y  sólo  pueden  ser  desarrollados,  estudiados y modificados por esta compañía. </p>
+<p>Estos sistemas operativos son capaces de operar tanto en arquitecturas x86, como en ARM. El primer Windows surge en 1985 cuando Microsoft incorporó una interfaz gráfica a su sistema operativo MS-DOS.</p>
+<p>Los sistemas Windows se basan principalmente en dos arquitecturas o familias: la 9X y la NT, aunque actualmente la que domina el mercado es la familia NT, un ejemplo de ello es el actual Windows 10. </p>
+<p>Ahora mismo podemos encontrarnos ordenadores con las siguientes versiones:  </p>
+<ul>
+<li>Para equipos basados en la arquitectura x86 o x64: podemos encontrar con equipos con Windows 7, Windows 8, Windows 10 y Windows 11, aunque Windows 10/11 son los únicos que tienen soporte estándar, el resto de sistemas se encuentra en <a href="https://support.microsoft.com/es-es/help/14085/fixed-lifecycle-policy">soporte extendido</a> por lo que es conveniente dar el salto a la última versión de Windows.  </li>
+<li>Para equipos servidores: la última versión es Windows Server 2022. </li>
+<li>Para  teléfonos  móviles:  existía una versión  llamada  Windows 10  Mobile, cuyo desarrollo fue suspendido por la poca cuota de mercado que tenía.  </li>
+</ul>
+<p>El objetivo actual de Microsoft con su sistema operativo Windows 10/11 es el de conseguir un sistema operativo válido y eficiente para las diferentes arquitecturas y dispositivos existentes en el mercado.</p>
+<h3 id="sistemas-operativos-os">Sistemas operativos OS<a class="headerlink" href="#sistemas-operativos-os" title="Permanent link">¶</a></h3>
+<p>Estos  sistemas  operativos  también  son  conocidos  como  <strong>macOS</strong>  y  pertenecen  a  la compañía Apple.  Esta  compañía  se  reserva  los  derechos  de  estudio y  desarrollo  del sistema operativo, por lo que es un <strong>software privativo</strong>, cuya licencia es Apple Public Source License / Apple EULA. </p>
+<p>En la actualidad tenemos las siguientes versiones disponibles: </p>
+<ul>
+<li>Para los equipos de sobremesa: tenemos el sistema Mac OS X, sucesor del Mac OS 9. El OS X dispone de muchas versiones diferente siendo la más reciente Mac OS 13 de Junio de 2022 de nombre <strong>Ventura</strong>.</li>
+<li>Para equipos servidores: en estos equipos tiene una serie de versiones basadas en Unix, cuyo nombre es Mac OS X y dispone de varias versiones, siendo la más actual la versión 10.7 llamada “Lion” de 2011. Solo funciona con los antiguos servidores PowerPC.</li>
+<li>Para dispositivos móviles: los sistemas operativos de Apple para móviles y tablets de su marca se llaman iOS, cuya última versión es la 16.1, lanzada en octubre de 2022.</li>
+</ul>
+<h3 id="otros-sistemas-operativos">Otros sistemas operativos<a class="headerlink" href="#otros-sistemas-operativos" title="Permanent link">¶</a></h3>
+<p>Además  de  estos  sistemas  operativos,  existen  otros  muchos  de  los  que  podemos destacar: </p>
+<ul>
+<li>Google Chrome OS: Sistema Open Source desarrollado por Google y basado en Linux. Funciona en arquitecturas x86 y ARM.  </li>
+<li>Solaris: desarrollado inicialmente por Oracle, pero actualmente en su mayoría es de código abierto (Opensolaris). Su Kernel está basado en SunOs, que deriva de UNIX. Usa una interfaz gráfica basada en Java. </li>
+<li><strong><em>Berkeley Software Distribution</em></strong> o <strong>BSD</strong> (en español, «distribución de software Berkeley»)fue unsistema operativos derivado de <a href="https://es.wikipedia.org/wiki/Unix">Unix</a> que nace a partir de los aportes realizados a ese sistema por la <a href="https://es.wikipedia.org/wiki/Universidad_de_California_en_Berkeley">Universidad de California en Berkeley</a>. Algunos sistemas operativos descendientes del sistema desarrollado por Berkeley son <a href="https://es.wikipedia.org/wiki/SunOS">SunOS</a>, <a href="https://es.wikipedia.org/wiki/FreeBSD">FreeBSD</a>, <a href="https://es.wikipedia.org/wiki/NetBSD">NetBSD</a> y <a href="https://es.wikipedia.org/wiki/OpenBSD">OpenBSD</a>. Estos, a su vez, han sido utilizados por sistemas operativos propietarios, incluidos los macOS e iOS de Apple, que se derivaron de ellos, y Microsoft Windows que usaba (al menos) parte de su código TCP/IP, que era legal. El código de FreeBSD también se utilizó para crear el sistema operativo para la PlayStation y Nintendo Switch</li>
+</ul>
+<h2 id="clasificacion-de-los-sistemas-operativos">Clasificación de los Sistemas Operativos<a class="headerlink" href="#clasificacion-de-los-sistemas-operativos" title="Permanent link">¶</a></h2>
+<p>El  sistema  operativo  es  un  programa  grande  y  complejo,  compuesto  por  unos componentes  con  las  funciones  bien  definidas.  Estos  componentes  se  pueden estructurar de distintas formas, haciendo que forme parte del kernel, o no. Por ello, vamos a hacer una primera clasificación de los sistemas operativos según su núcleo o kernel: </p>
+<ul>
+<li><strong>Monolíticos:</strong> no tienen una estructura clara y bien definida. Todos los componentes están  enlazados  en  un  único  programa  que  se  ejecuta  en  un  único  espacio  de direcciones. Todas  las funciones  se  ejecutan  en  modo  núcleo.  Parten  de  sistemas operativos sencillos a los que se les ha ido añadiendo muchas funcionalidades hasta convertirse en enormes y complejos. Los principales sistemas monolíticos son MS- DOS,  UNIX  y  todos  sus  derivados  GNU/Linux.  Su  principal  problema  es  que  son sistemas  poco  manejables  y  poco  comprensibles.  En  estos  sistemas  todos  los procedimientos y variables son visibles por todos. Para solucionar este problema, se necesita dotar de estructura al sistema operativo. </li>
+<li><strong>Sistema  monolítico  por  capas</strong>:  en  estos  sistemas,  cada  capa  implementa  una parte del sistema y las pone a la disposición de las capas superiores, tomando los  servicios  de  la  capa  inmediatamente  inferior.  Su  principal  ventaja  es  la modularidad  y  la  ocultación;  una  capa  no  tiene  que  saber  cómo  se  ha implementado  su  capa  inferior,  sólo tiene  que  conocer  la  interfaz  que  ofrece. Cada  capa  puede  construirse  y  depurarse  por  separado.  Algunos  ejemplos  de sistemas por capas son: THE, OS/2 y MULTICS. </li>
+<li>
+<p><strong>Microkernel  o  Cliente-Servidor:</strong>  implementa  la  mayor  parte  de  los  servicios  y funciones del sistema operativo en procesos de usuario, dejando sólo una pequeña parte  del  sistema  operativo  ejecutando  en  modo  núcleo.  El  núcleo  realiza  unas funciones básicas que pueden variar, aunque suelen incluir la gestión de procesos, de memoria, la comunicación de procesos y la gestión de interrupciones; mientras que las demás funciones son servicios ofrecidos por los servidores, que se ejecutan en modo usuario. Este sistema presenta una gran flexibilidad, el fallo en un módulo no hace caer todo el sistema, es fácil de depurar. Sus principales desventajas son: es más difícil de construir ya que un módulo debe encajar con el resto, tienen mayor carga en el tratamiento de los servicios debido al uso de espacios de direcciones distintos, por lo que su rendimiento es menor. Algunos sistemas con este núcleo son: Minix, Amoeba y los actuales macOS. </p>
+</li>
+<li>
+<p><strong>Híbridos:</strong> Se trata de un micronúcleo al que se le han añadido algunos de los servicios no  esenciales  para  que  el  S.O.  trabaje  más  rápido.  Es  una  mezcla  entre  núcleo monolítico y micronúcleo. Algunos ejemplos de sistemas operativos con este tipo de núcleo son: los sistemas operativos Windows de la familia NT y DragonFly BSD.</p>
+</li>
+</ul>
+<p><img alt="" src="OS-structure2.svg"/></p>
+<p>Otras posibles clasificaciones de los sistemas operativos según diferentes perspectivas son las mostradas a continuación:  </p>
+<table>
+<thead>
+<tr>
+<th align="center"><strong>Número de usuarios</strong></th>
+<th align="center"><strong>Número de tareas</strong></th>
+<th align="center"><strong>Número de procesadores</strong></th>
+<th align="center"><strong>Ofrecimiento de servicios</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Monousuario</td>
+<td align="center">Monotarea</td>
+<td align="center">Monoproceso</td>
+<td align="center">Centralizados</td>
+</tr>
+<tr>
+<td align="center">Multiusuario</td>
+<td align="center">Multitarea</td>
+<td align="center">Multiproceso</td>
+<td align="center">Distribuidos</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">En red</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">De escritorio</td>
+</tr>
+</tbody>
+</table>
+<h2 id="principales-funciones-de-los-sistemas-operativos">Principales funciones de los Sistemas Operativos<a class="headerlink" href="#principales-funciones-de-los-sistemas-operativos" title="Permanent link">¶</a></h2>
+<p>El sistema operativo está compuesto básicamente por tres capas: </p>
+<ul>
+<li>El núcleo. (Kernel)</li>
+<li>Los servicios</li>
+<li>El intérprete de comandos.(Shell) </li>
+</ul>
+<p><img alt="" src="SI23/docs/docs/img02/07.png"/></p>
+<p>El  <strong>núcleo</strong>  es  la  parte  del  sistema  operativo  que  interacciona  directamente  con  el hardware de la máquina. Sus principales funciones se centran en la gestión de recursos, como  el  procesador,  tratamiento  de  interrupciones  y  las  funciones  básicas  de manipulación de memoria.Hay diferentes tipos de kernels, como veremos más adelante. </p>
+<p>Los  <strong>servicios</strong> se agrupan según su funcionalidad en varios componentes, los cuales se ocupan de las <strong>principales funciones</strong> del sistema operativo. </p>
+<ul>
+<li><strong>Gestión  de  procesos:</strong>  se  encarga  de  la  creación,  planificación  y  destrucción  de procesos. </li>
+<li><strong>Gestión de memoria:</strong> gestiona las partes de memoria libres y ocupadas, así como de asignar y liberar la memoria para los diferentes procesos. </li>
+<li><strong>Gestión de la E/S:</strong> facilita la comunicación con los diferentes dispositivos periféricos. </li>
+<li><strong>Gestión de archivos y directorios:</strong> se encarga del manejo de archivos y directorios y de la administración del almacenamiento secundario. </li>
+<li><strong>Comunicación  y  sincronización  entre  procesos:</strong>  encargada  de  ofrecer mecanismos para que los procesos puedan comunicarse y sincronizarse. </li>
+<li><strong>Seguridad y protección:</strong> se encarga de garantizar la identidad de los usuarios y definir el nivel de permisos de acceso o modificación de los diferentes recursos del sistema. </li>
+</ul>
+<p>Estos  servicios  se  ofrecen  mediante  una  interfaz  de  llamadas  al  sistema  (<em>API  – Application  Programming  Interface</em>).  En  un  mismo  sistema  operativo  se  puede  incluir más de una API. Las APIs mostradas son: </p>
+<ul>
+<li><strong>Windows API:</strong> para los sistemas operativos Windows, también llamada Win32. </li>
+<li><strong>POSIX:</strong> para los sistemas operativos basados en UNIX, como las distribuciones GNU/ Linux. </li>
+<li><strong>COCOAAPI:</strong> interfaz para los últimos sistemas de macOS X, totalmente compatible con sistemas de 64 bits. </li>
+</ul>
+<p>El <strong>Shell o intérprete de comandos</strong> suministra una interfaz a través de la cual el usuario puede  interaccionar  con  la  computadora,  facilitando  el  acceso  a  las  funciones  del núcleo. El intérprete recibe las órdenes del usuario, los interpreta y, si es posible y está permitido, los ejecuta. Este intérprete en ocasiones se considera que forma parte del sistema operativo y en otras ocasiones no. Estos intérpretes pueden ser de varios tipos: </p>
+<ul>
+<li>Interfaz gráfica de usuario <strong>(<em>GUI - Graphic User Interface</em>)</strong></li>
+<li>Interfaz de línea de comandos <strong>(Consola o terminal o <em>CLI - Command Line Interpreter</em>)</strong></li>
+</ul>
+<p>El sistema operativo puede incluir varios interfaces, tanto en modo texto como gráficos, entre los cuales podemos optar según nos interese y disponibilidad.</p>
+<h2 id="gestion-de-procesos">Gestión de procesos<a class="headerlink" href="#gestion-de-procesos" title="Permanent link">¶</a></h2>
+<h3 id="introduccion_1">Introducción<a class="headerlink" href="#introduccion_1" title="Permanent link">¶</a></h3>
+<p>Ya hemos dicho que el <strong>núcleo</strong> es la parte del sistema operativo que interacciona directamente con el hardware de la máquina. Una de las <strong>principales funciones</strong> del sistema operativo es la gestión de procesos, para ello se utilizan una serie de algoritmos que nacieron por la necesidad de poder ordenar los procesos para ganar eficiencia a la hora de tratar con ellos. Es decir, son los encargados de ordenar y dirigir los procesos para asegurar que ninguno de ellos monopolice el uso de la CPU.</p>
+<h3 id="conceptos-basicos">Conceptos básicos.<a class="headerlink" href="#conceptos-basicos" title="Permanent link">¶</a></h3>
+<p>Antes de ver algunos de los algoritmos más utilizados vamos a definir algunos conceptos básicos: </p>
+<ul>
+<li><strong>Tiempo de espera</strong>: el tiempo que un proceso permanece en espera en la cola de ejecución. </li>
+<li><strong>Tiempo de retorno</strong>: tiempo que va desde que se lanza un proceso hasta que finaliza. </li>
+<li><strong>Tiempo de respuesta</strong>: tiempo que un proceso bloqueado tarda en entrar en ejecución. </li>
+<li><strong>Uso de CPU</strong>: porcentaje de tiempo que la CPU está ocupada. </li>
+<li><strong>Productividad</strong>: número de procesos realizados en una unidad de tiempo. </li>
+</ul>
+<p>Por último, dos algoritmos: </p>
+<ul>
+<li><strong>Apropiativo</strong>: también conocido como expulsivo o expropiativo. Nos permite la expulsión de procesos para ejecutar un nuevo proceso, poniendo en cola al anterior. </li>
+<li><strong>No apropiativo</strong>: No nos permite la expulsión, por lo que un proceso nuevo no entrará hasta que termine el anterior. </li>
+</ul>
+<h3 id="tipos-de-algoritmos">Tipos de algoritmos.<a class="headerlink" href="#tipos-de-algoritmos" title="Permanent link">¶</a></h3>
+<h4 id="fcfs-first-come-first-served">FCFS (First-Come, First-Served)<a class="headerlink" href="#fcfs-first-come-first-served" title="Permanent link">¶</a></h4>
+<p>También llamado <strong>FIFO</strong> (First In, First Out). Este algoritmo es muy sencillo y simple, pero también el que menos rendimiento ofrece. Básicamente, en este algoritmo, el primer proceso que llega se ejecuta y, una vez finalizado se ejecuta el siguiente. <strong>No apropiativo. Penaliza a los procesos cortos</strong>. </p>
+<p><strong>Ejemplo:</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center"><strong>Procesos</strong></th>
+<th align="center"><strong>Llegada</strong></th>
+<th align="center"><strong>Tiempo uso CPU</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">P1</td>
+<td align="center">0</td>
+<td align="center">24</td>
+</tr>
+<tr>
+<td align="center">P2</td>
+<td align="center">2</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="center">P3</td>
+<td align="center">4</td>
+<td align="center">3</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+<th>11</th>
+<th>12</th>
+<th>13</th>
+<th>14</th>
+<th>15</th>
+<th>16</th>
+<th>17</th>
+<th>18</th>
+<th>19</th>
+<th>20</th>
+<th>21</th>
+<th>22</th>
+<th>23</th>
+<th>24</th>
+<th>25</th>
+<th>26</th>
+<th>27</th>
+<th>28</th>
+<th>29</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P1</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>F</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>P2</td>
+<td></td>
+<td></td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>X</td>
+<td>X</td>
+<td>F</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>P3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>X</td>
+<td>X</td>
+<td>F</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="image-20221104094128201" src="SI23/docs/docs/img02/08.png"/></p>
+<p>Tiempo de retorno = tiempo de finalización - tiempo de llegada</p>
+<p>Tiempo de espera = tiempo de retorno - tiempo de servicio</p>
+<h4 id="sjf-shortest-job-first">SJF (Shortest Job First)<a class="headerlink" href="#sjf-shortest-job-first" title="Permanent link">¶</a></h4>
+<p>Este algoritmo siempre prioriza los procesos más cortos primero, independientemente de su llegada. En caso de que los procesos sean iguales, utilizará el método FIFO (es decir, el orden según su entrada). Este algoritmo corre el riesgo de poner siempre al final de la cola los procesos más largos, por lo que nunca se ejecutarán. Esto se conoce como <strong>inanición</strong>. Es un método <strong>no apropiativo</strong>. Solo se puede usar si se conoce de antemano la duración de cada trabajo. </p>
+<p><strong>Ejemplo:</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center"><strong>Procesos</strong></th>
+<th align="center"><strong>Llegada</strong></th>
+<th align="center"><strong>Tiempo uso CPU</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">P1</td>
+<td align="center">0</td>
+<td align="center">7</td>
+</tr>
+<tr>
+<td align="center">P2</td>
+<td align="center">2</td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td align="center">P3</td>
+<td align="center">4</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">P4</td>
+<td align="center">5</td>
+<td align="center">4</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+<th>11</th>
+<th>12</th>
+<th>13</th>
+<th>14</th>
+<th>15</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P1</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>F</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>P2</td>
+<td></td>
+<td></td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>F</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>P3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>F</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>P4</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>F</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="image-20221104094649176" src="SI23/docs/docs/img02/09.png"/></p>
+<h4 id="srtf-short-remaining-time-next">SRTF (Short Remaining Time Next)<a class="headerlink" href="#srtf-short-remaining-time-next" title="Permanent link">¶</a></h4>
+<p><strong>Si añadimos la expulsión</strong> de procesos al algoritmo SJF, obtendremos el <strong>SRTF</strong>. Éste será capaz de expulsar un proceso largo en ejecución para ejecutar otros más cortos. El problema que puede surgir es que un proceso largo puede llegar a expulsarse muchas veces y nunca terminar debido a la ejecución de otros más cortos. </p>
+<p><strong>Ejemplo:</strong> </p>
+<table>
+<thead>
+<tr>
+<th align="center"><strong>Procesos</strong></th>
+<th align="center"><strong>Llegada</strong></th>
+<th align="center"><strong>Tiempo uso CPU</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">P1</td>
+<td align="center">0</td>
+<td align="center">7</td>
+</tr>
+<tr>
+<td align="center">P2</td>
+<td align="center">2</td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td align="center">P3</td>
+<td align="center">4</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">P4</td>
+<td align="center">5</td>
+<td align="center">4</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+<th>11</th>
+<th>12</th>
+<th>13</th>
+<th>14</th>
+<th>15</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P1</td>
+<td>X</td>
+<td>X</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>F</td>
+</tr>
+<tr>
+<td>P2</td>
+<td></td>
+<td></td>
+<td>X</td>
+<td>X</td>
+<td>E</td>
+<td>X</td>
+<td>F</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>P3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>F</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>P4</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>E</td>
+<td>E</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>F</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="image-20221104095505922" src="SI23/docs/docs/img02/10.png"/></p>
+<h4 id="round-robin">Round Robin<a class="headerlink" href="#round-robin" title="Permanent link">¶</a></h4>
+<p>Este algoritmo asigna a cada proceso un tiempo equitativo tratando a todos los procesos por igual y con la misma prioridad. </p>
+<p>Este algoritmo es <strong><em>circular</em></strong>, volviendo siempre al primer proceso una vez terminado con el último. Para controlar este método, a cada proceso se le asigna un intervalo de tiempo llamado <strong>quantum</strong> o <strong>cuanto</strong> (para definirlo se utiliza esta regla, el 80% de los procesos tienen que durar menos tiempo que el <strong><em>quantum</em></strong> definido). </p>
+<p>Pueden suceder dos casos con este método: </p>
+<ul>
+<li><strong>El proceso es menor que el quantum</strong>: al terminar antes, se planifica un nuevo proceso. </li>
+<li><strong>El proceso es mayor que el quantum</strong>: al terminar el quantum se expulsa el proceso dando paso al siguiente proceso en la lista. Al terminar la iteración se volverá para terminar el primer proceso expulsado. </li>
+</ul>
+<p>Algoritmo apropiativo. Se debe tener en cuenta que cada cambio de contexto genera retraso.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Procesos</strong></th>
+<th><strong>Llegada</strong></th>
+<th><strong>Tiempo uso CPU</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P1</td>
+<td>0</td>
+<td>10</td>
+</tr>
+<tr>
+<td>P2</td>
+<td>1</td>
+<td>4</td>
+</tr>
+<tr>
+<td>P3</td>
+<td>2</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+<th>11</th>
+<th>12</th>
+<th>13</th>
+<th>14</th>
+<th>15</th>
+<th>16</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P1</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>X</td>
+<td>F</td>
+</tr>
+<tr>
+<td>P2</td>
+<td></td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>F</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>P3</td>
+<td></td>
+<td></td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>E</td>
+<td>X</td>
+<td>X</td>
+<td>F</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="image-20221104100203969" src="SI23/docs/docs/img02/11.png"/></p>
+<h2 id="gestion-de-memoria">Gestión de Memoria<a class="headerlink" href="#gestion-de-memoria" title="Permanent link">¶</a></h2>
+<p>En un sistema monoprogramado (lo contrario que multiprogramado), en la memoria del ordenador solo hay un único programa, acompañado de sus datos y del sistema operativo. Esto hace que el uso de la memoria, y la asignación de la misma al programa sea muy simple. Sin embargo, en un sistema multiprogramado nos vamos a encontrar en memoria con varios programas a la vez (2 en el mejor de los casos, pero podemos realizar multiprogramación con 20, 100 o 700 procesos). </p>
+<p><img alt="" src="SI23/docs/docs/img02/12.jpeg"/></p>
+<p>Este “lio” que vemos en la memoria usando multiprogramación hace que se presenten dos problemas fundamentales, <strong>la relocalización y la protección.</strong> </p>
+<h3 id="problemas-con-la-memoria">Problemas con la memoria<a class="headerlink" href="#problemas-con-la-memoria" title="Permanent link">¶</a></h3>
+<h4 id="relocalizacion">Relocalización<a class="headerlink" href="#relocalizacion" title="Permanent link">¶</a></h4>
+<p>Consiste en que los programas que necesitan cargarse en memoria real ya están compilados y montados, de manera que internamente contienen una serie de referencias a direcciones de instrucciones, rutinas y procedimientos que ya no son válidas en el espacio de direcciones de memoria real de la sección en la que se carga el programa.  Esto  es,  cuando  se  compiló  el  programa  se  definieron  o  resolvieron  las direcciones de memoria de acuerdo a la sección de ese momento, pero si el programa se carga en otro día en una sección diferente, las direcciones reales ya no coinciden.  </p>
+<p>Si en memoria solo va a estar este programa, no hay problemas en cargarlo siempre en la misma dirección o sección de memoria, pero si cargamos varios programas en la memoria, esto ya no es posible, dado que varios programas podrían pedir la misma sección. </p>
+<p><img alt="" src="SI23/docs/docs/img02/13.png"/></p>
+<p>En este ejemplo teórico que vemos arriba, el proceso A está preparado para cargarse en la dirección de memoria 256.212. Mientras que solo dicho proceso esté funcionando en memoria no hay problema en esto.  </p>
+<p><img alt="" src="SI23/docs/docs/img02/14.png"/></p>
+<p>En este ejemplo teórico de arriba, vemos como al mismo tiempo que el proceso A, intentamos ejecutar un proceso B que quiere cargarse en la dirección de memoria 310.815... vemos como “machaca” al proceso A, y  también  sus  datos.  Esto  conllevaría  que  ambos  procesos  dejarían  de  funcionar,  ya  que  irían sobrescribiéndose el uno al otro.  </p>
+<p>El <strong>gestor</strong> o <strong>controlador de memoria</strong> del sistema operativo, puede solucionar este problema de varias formas, una de las más usadas consiste en tener un <strong>registro</strong> que guarde la dirección <strong>base</strong> de la sección que va a contener al programa. Cada vez que el programa haga una referencia a una dirección de memoria, se le suma el registro base para encontrar la dirección real. Así, en el ejemplo anterior tendríamos que cuando el proceso A quiere acceder a la memoria para instalarse en la dirección 256.212, el SO (Sistema Operativo) hace la operación (dirección + base) donde base por ejemplo es 20.000 por lo que el proceso A sería cargado en la dirección 276.212. Cuando el proceso B se quiera cargar, el SO ajusta la base por ejemplo a 500.000 (para saltarse al proceso  A), de forma que en lugar de instalarse en la dirección 310.815 se instalará en la dirección 810.815.  </p>
+<h4 id="proteccion">Protección<a class="headerlink" href="#proteccion" title="Permanent link">¶</a></h4>
+<p>Este problema se refiere a que, una vez que un programa ha sido cargado a memoria en algún segmento en particular, nada le impide al programador que intente direccionar (por error o deliberadamente) localidades de memoria menores que el límite inferior de su programa o superiores a la dirección mayor; es decir, quiere referenciar localidades fuera de su espacio de direcciones.  </p>
+<p><img alt="" src="15.jpeg"/></p>
+<p>Obviamente, este es un problema de protección, ya que no es legal leer o escribir en áreas de memoria que pertenezcan a otros programas, y hay que proteger estas zonas de memoria.  </p>
+<p>La solución a este problema puede ser el uso de un <strong>registro base</strong> y un <strong>registro límite</strong>. El registro base contiene la dirección del comienzo de la sección que contiene el programa, mientras que el límite contiene la dirección donde termina. Cada vez que el programa hace una referencia a memoria se comprueba si cae en el rango de los registros y si no es así se envía un mensaje de error y se aborta el programa.  </p>
+<p>Muchos  programas  antiguos  dan  errores  de  acceso  a  memoria  cuando  son  ejecutados  en  sistemas multiprogramados. Precisamente estos errores vienen dados porque intentan acceder a direcciones de memoria que quedan fuera de su ámbito.  </p>
+<p>En estos casos, el sistema operativo impide que dichos programas accedan a esas direcciones, lo que provoca un error en el acceso a memoria.</p>
+<p><img alt="" src="16.jpeg"/></p>
+<h3 id="memoria-virtual">Memoria virtual<a class="headerlink" href="#memoria-virtual" title="Permanent link">¶</a></h3>
+<p>Las  CPU  de  los  ordenadores  eran  cada  vez  más poderosas, lo que permitía ejecutar programas cada  vez más potentes, y por lo tanto más grandes.</p>
+<p><img alt="" src="17.jpeg"/></p>
+<p>Al mismo tiempo, el uso de la multiprogramación, hacía  que  el  sistema  operativo  tuviera  que  colocar  por  decenas  de  estos  grandes  procesos  en  la memoria RAM.    </p>
+<p>El  problema  es  que  la  cantidad  de  memoria  RAM  “física”  que  podemos  instalar  en  un  ordenador  es  finita,  es  decir,  tiene  un  límite.  Así,  si  intentamos  ejecutar en multiprogramación 20 procesos, y cada uno de ellos necesita 512 MB de RAM para trabajar, deberíamos tener instalados en nuestro main memory ordenador 10 GB de RAM.  </p>
+<p>Todo esto empujó a los diseñadores de los sistemas operativos a implantar un mecanismo que permitiera ofrecer a los procesos más cantidad de memoria de la que realmente estaba instalada en la máquina, esto es, de ofrecer "<strong>memoria virtual</strong>”.  </p>
+<p>La <strong>memoria virtual</strong> se llama así porque el programa ve una cantidad de memoria mucho mayor que la real, y que en realidad se trata de la suma de la memoria de almacenamiento primario y una cantidad determinada de almacenamiento secundario (por ejemplo, del disco duro).  </p>
+<p>El sistema operativo, en su módulo de gestión de memoria, se encarga de intercambiar programas enteros, segmentos  o  páginas  entre  la  memoria  real  y  el  medio  de  almacenamiento  secundario.  Si  lo  que  se intercambia son procesos enteros, se habla entonces de <strong>multiprogramación en memoria real</strong>, pero si lo que se intercambian son segmentos o páginas, se puede hablar de <strong>multiprogramación con memoria virtual</strong>.  </p>
+<p>Existe una técnica en la cual, el sistema operativo divide a los procesos en pequeñas porciones, de tamaño fijo denominadas <strong>páginas</strong>, de un tamaño múltiplo de 1 K. Estas páginas van a ser pasadas de la RAM al disco y viceversa. Al proceso de intercambiar páginas, segmentos o programas completos entre RAM y disco se le conoce como <strong>'intercambio'</strong> o ‘<strong>swapping</strong>".  </p>
+<p>En la <strong>paginación</strong>, se debe cuidar el tamaño de las páginas, ya que si éstas son muy pequeñas el control por parte del sistema operativo para saber cuáles están en RAM y cuáles en disco, sus direcciones reales, etc, crece y provoca mucha "sobrecarga' (<strong>overhead</strong>). Por otro lado, si las páginas son muy grandes, el overhead disminuye, pero entonces puede ocurrir que se desperdicie memoria en procesos pequeños. Debe haber un equilibrio entre ambos conceptos.  </p>
+<p>Otro aspecto importante es la estrategia para cargar páginas (o segmentos) a la memoria RAM. Se usan más comúnmente  dos  estrategias:  <strong>cargado  de  páginas  por  demanda</strong>  y  <strong>cargado  de  páginas  anticipada.</strong>  La estrategia de cargado y por demanda consiste en que las páginas solamente son llevadas a RAM si son solicitadas, es decir, si se hizo referencia a una dirección que cae dentro de ellas.  </p>
+<p>La carga anticipada consiste en tratar de adivinar qué páginas serán solicitadas en el futuro inmediato y cargarlas de antemano, para que cuando se pidan ya no ocurran fallos de página. Ese "adivinar' puede ser que se aproveche del fenómeno de localidad y que las páginas que se cargan por anticipado sean aquellas que contienen direcciones contiguas a la dirección que se acaba de referenciar. En el caso de Windows, se usa una conjunción de ambos métodos, y se utiliza un fichero en disco duro donde se va almacenando toda la información sobre  índices de páginas en HD, en RAM, etc. Este fichero se denomina  <strong>pagefile.sys</strong>  y  lo  podéis  encontrar  normalmente  en  la  raíz  de  vuestro volumen de sistema.   </p>
+<p>Un problema que tenemos con la memoria virtual es la diferencia  de velocidad enorme que existe entre la RAM y la memoria de  almacenamiento  secundario.  Si  cargamos  muchos  procesos,  y  agotamos nuestra memoria RAM real, el SO permitirá que todo  siga funcionando, usando el HD, pero tardará muchísimo en pasar  las páginas de RAM a HD y viceversa. En muchas ocasiones, nos  parecerá incluso que el SO se ha quedado “colgado”. Esto es muy  habitual en sistemas con poca memoria, donde vemos que de  repente la luz indicadora de actividad en los discos duros se queda  encendida, y el SO deja de responder durante un buen rato.   </p>
+<p>Un intento de solucionar esto es usar memorias de estado sólido en lugar del HD para paginar ya que son memorias mucho más rápidas, esto fue implementado desde Windows Vista.  </p>
+<h2 id="sistema-de-ficheros-fs-file-system">Sistema de Ficheros (FS.- File System)<a class="headerlink" href="#sistema-de-ficheros-fs-file-system" title="Permanent link">¶</a></h2>
+<p>Un fichero es un mecanismo de abstracción que sirve como unidad lógica de almacenamiento de información. El fichero agrupa una colección de informaciones relacionadas entre sí y definidas por su creador. A todo fichero le corresponde un nombre único que lo identifique entre los demás ficheros.   </p>
+<p>Es necesario que el sistema operativo cuente con un sistema que se encargue de administrar la información almacenada en los dispositivos en forma de ficheros: de esto se encargan los sistemas de ficheros.   </p>
+<p>Un sistema de ficheros es el aspecto más visible de todo sistema operativo y existe por razones tecnológicas, ya que no hay memoria principal lo suficientemente grande como para no necesitar de almacenamiento secundario. Surge debido a la necesidad del sistema operativo de poder gestionar la información de forma eficiente y estructurada, además de establecer unos parámetros de seguridad y protección en entornos críticos.  </p>
+<p>El sistema operativo ofrece una visión lógica y uniforme del almacenamiento de información realizando una abstracción de las propiedades físicas de sus dispositivos de almacenamiento. Para ello, define el concepto lógico de fichero. El sistema operativo se debe encargar del acoplamiento entre los ficheros y los dispositivos físicos, por medio del sistema de ficheros, que debe ser independiente del soporte físico concreto sobre el que se encuentre.   </p>
+<p>Los objetivos principales de todo sistema de ficheros deben ser los siguientes: Crear, borrar y modificar ficheros.  </p>
+<ul>
+<li>Permitir el acceso controlado a la información.  </li>
+<li>Permitir intercambiar datos entre ficheros.  </li>
+<li>Poder efectuar copias de seguridad recuperables. </li>
+<li>Permitir el acceso a los ficheros mediante nombres simbólicos.   </li>
+</ul>
+<p>Hay otros objetivos secundarios, entre los que destacan:   </p>
+<ul>
+<li>Optimizar el rendimiento.  </li>
+<li>Tener soportes diversos para E/S (para poder seguir utilizando los mismos ficheros, aunque cambie el soporte). </li>
+<li>Ofrecer soporte multiusuario. </li>
+<li>Minimizar las pérdidas de información.   </li>
+</ul>
+<p>Normalmente los ficheros se organizan en directorios (también llamados carpetas) para facilitar su uso. Estos directorios son ficheros que contienen información sobre otros ficheros: no son más que contenedores de secuencias de registros, cada uno de los cuales posee información acerca de otros ficheros. </p>
+<p>La información que contiene un fichero la define su creador. Hay muchos tipos diferentes de información que puede almacenarse en un fichero: programas fuente, programas objeto, datos numéricos, textos, registros contables, fotografías, videos, etc. Un fichero tiene una cierta estructura, definida según el uso que se vaya a hacer de él.  </p>
+<p>Por ejemplo, un fichero de texto es una secuencia de caracteres organizados en líneas (y posiblemente en páginas); un fichero fuente es una secuencia de subrutinas y funciones, un fichero gráfico es una secuencia que permite dibujar pixeles en pantalla, etc.  </p>
+<p>Cualquier sistema operativo distingue entre varios <strong>tipos básicos de ficheros</strong>, que será la clasificación que consideremos nosotros: </p>
+<ul>
+<li><strong>Regulares o Normales</strong>: Aquellos ficheros que contienen datos (información).  </li>
+<li><strong>Directorios</strong>: Aquellos ficheros cuyo contenido es información sobre otros ficheros, normalmente un vector de entradas con información sobre los otros ficheros. </li>
+<li><strong>De dispositivo</strong>: Existen dispositivos cuya E/S se realiza como si fuesen ficheros, por lo tanto, es razonable asociarles ficheros para simplificar y hacer más transparente el intercambio de información con dichos dispositivos.  </li>
+</ul>
+<p>Aunque se imponga al sistema operativo el desconocimiento del tipo de ficheros que manipula, sí se hace una distinción del mismo de forma transparente: a través de las extensiones del nombre. Mediante la extensión del nombre del fichero (una cadena de caracteres de pequeña longitud) se puede determinar el tipo del fichero. Algunos sistemas de ficheros consideran a la extensión como una parte del nombre (y, de hecho, admiten que un mismo fichero posea varias extensiones anidadas), y otros la diferencian del nombre a nivel interno. </p>
+<p>De este modo, aunque el sistema operativo no conozca internamente la estructura de los ficheros, si es capaz de manejarlos eficientemente gracias al uso de estas extensiones. Esta es la aproximación de los sistemas operativos de Microsoft. </p>
+<p>Unix y sus variantes (Linux) sin embargo, optan por la no utilización de extensiones, lo que implica que el usuario es el único encargado de saber lo que se puede realizar o no con un fichero dado.   </p>
+<p>10.1 ESTRUCTURAS DE DIRECTORIOS.  </p>
+<p>Veamos el siguiente ejemplo: Imaginemos un bufete de abogados que dispone de una ingente cantidad de información en papel: casos judiciales, precedentes, historiales de abogados, historiales de clientes, nóminas, cartas recibidas, copias de cartas enviadas, facturas del alquiler del local, albaranes de compra de lapiceros, procedimientos, etc.   </p>
+<p>Ahora supongamos que todos estos documentos se almacenan en una enorme montaña de papel en el centro de  una  habitación:  la  locura  está  garantizada.  Obviamente  el  bufete  debe  disponer  de  un  armario  de archivadores, la información se podrá almacenar de forma lógica para poder acceder a ella rápidamente cuando sea necesario.   </p>
+<p>Lo mismo ocurre en un sistema de ficheros informático: conviene guardar la información (los ficheros) en archivadores. Los archivadores serán lo que llamaremos directorios, un tipo especial de ficheros donde se almacena información relativa a otros ficheros.   </p>
+<p>Así, en un directorio se almacenarán ficheros relacionados entre sí, y ficheros totalmente independientes irán alojados en distintos directorios. Evidentemente, esta organización es puramente lógica: todos los ficheros estarán almacenados físicamente en el mismo lugar.   </p>
+<p>Hay varias formas de organizar los directorios sobre un disco: </p>
+<p><img alt="" src="18.png"/></p>
+<ul>
+<li><strong>Directorio de un nivel.</strong> En este tipo de organización solo se permite  un nivel de directorio.   </li>
+<li><strong>Directorio de dos niveles.</strong> En este tipo de organización, un directorio  puede incluir dentro otro directorio, pero este ya no puede incluir  otro más.  </li>
+<li><strong>Directorio  con  estructura  arborescente.</strong>  Prácticamente  no  tiene  limitaciones.  Un  directorio  puede  incluir  otros  directorios,  sin  importar su número, y estos nuevos directorios pueden contener  otros directorios.    </li>
+</ul>
+<p>De esta forma, cada usuario puede crear sus propios directorios para organizar sus ficheros a su gusto. Un ejemplo de estructura de directorios de esta forma es la considerada por los sistemas de ficheros de Unix, MS-DOS, Windows, etc.   </p>
+<p>El árbol es de raíz única, de modo que cada fichero tiene un único nombre de ruta de acceso. El nombre de ruta  de  acceso  en  un  directorio  de  esta  forma  es  la  concatenación  de  los  nombres  de  directorio  y subdirectorios desde el directorio raíz hasta el directorio donde se encuentra alojado el fichero a través del camino único, culminando con el propio nombre del fichero dentro del directorio. </p>
+<p>Un directorio (o subdirectorio) contiene a su vez ficheros y/o subdirectorios, y todos los directorios poseen el mismo formato interno. Las entradas del directorio indican si el objeto referenciado es un fichero o un subdirectorio.   </p>
+<p>Se define <strong>directorio padre</strong> de un fichero o subdirectorio como el directorio en el que se encuentra su entrada de referencia Cada fichero o directorio (a excepción del directorio raíz) posee un único directorio padre. El directorio padre suele ser referenciado por los sistemas operativos con punto punto (..).   </p>
+<p>Se define directorio hijo de un directorio como el directorio que tiene por padre al primero. Un directorio puede contener múltiples directorios hijos, y cada directorio (a excepción del raíz) es hijo de algún otro.   </p>
+<p>Se define <strong>directorio actual</strong> como aquel en el que trabaja el usuario por defecto. Suele ser referenciado por los sistemas operativos con un punto (.). Cuando el usuario hace referencia a un fichero por nombre (no por nombre de ruta de acceso), el sistema inicia la búsqueda siempre en el directorio actual. Si no lo encuentra, comienza a recorrer el camino de búsqueda hasta dar con él. El usuario puede referirse a un fichero también por su nombre de ruta de acceso, en cuyo caso no se da lugar a emplear el camino de búsqueda. El usuario también puede cambiar su directorio actual, especificando un nombre de directorio.   </p>
+<p>En este caso, los nombres de ruta de acceso pueden adoptar dos formas alternativas.  </p>
+<p>La primera es la del nombre de <strong>ruta absoluto</strong>, la que hemos definido, por la cual se nombra a cada fichero con respecto al directorio raíz.   </p>
+<p><img alt="" src="19.png"/></p>
+<p>Por ejemplo, un nombre de ruta absoluto válido es C:  </p>
+<p><code>\Documentos\Jose\Privado\Carta.txt</code>. Normalmente, se denota el directorio raíz por medio de un símbolo especial dependiente de cada sistema de ficheros, aunque los más habituales son los símbolos '/' y '\'. En una estructura de directorio de este tipo, el nombre de ruta de acceso absoluto de un fichero o directorio debe ser único.   </p>
+<p>La segunda opción es la del nombre de <strong>ruta relativo</strong>. En este caso, se nombra al fichero con respecto al directorio actual. Para esta labor se definen en cada directorio dos entradas de directorio especiales: <code>.</code> (Un punto) que representa al propio directorio y <code>..</code> (Dos puntos), que representa a su directorio padre. Así, se puede considerar un camino único desde el directorio actual hasta cualquier fichero o directorio del sistema. Un ejemplo de ruta relativa válida podría ser por ejemplo <code>..\Privado\Carta.txt</code> o <code>Jose\Privado\Carta.txt</code>.   </p>
+<p>Los ficheros se van almacenando en el dispositivo, y por cada uno de ellos se apunta una entrada de directorio, donde almacenamos información sobre el tipo de fichero, nombre y demás. Hay que notar que por cada fichero se almacena por un lado el propio fichero, los datos, y por otro lado se almacena esta entrada de directorio.  </p>
+<p>Pero ¿qué se almacena realmente en una entrada de directorio? La siguiente tabla muestra algunas de estas informaciones, aunque en un sistema de ficheros concreto pueden no estar todas las que son ni ser todas las que están:   </p>
+<table>
+<thead>
+<tr>
+<th>Atributo</th>
+<th>Cometido</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nombre del fichero</td>
+<td>El nombre simbólico del fichero</td>
+</tr>
+<tr>
+<td>Tipo de fichero</td>
+<td>Para aquellos sistemas que contemplan diferentes tipos</td>
+</tr>
+<tr>
+<td>Ubicación</td>
+<td>Un puntero al dispositivo y a la posición del fichero en el dispositivo.</td>
+</tr>
+<tr>
+<td>Tamaño</td>
+<td>Tamaño actual del fichero (en bytes, palabras o bloques) y el máximo tamaño permitido.</td>
+</tr>
+<tr>
+<td>Posición actual</td>
+<td>Un puntero a la posición actual de lectura o escritura sobre el fichero. Su lugar exacto en el dispositivo.</td>
+</tr>
+<tr>
+<td>Protección</td>
+<td>Información referente a los permisos de acceso al fichero.</td>
+</tr>
+<tr>
+<td>Contador de uso</td>
+<td>Número de procesos que están utilizando simultáneamente el fichero.</td>
+</tr>
+<tr>
+<td>Hora y fecha</td>
+<td>De creación, último acceso, etc.</td>
+</tr>
+<tr>
+<td>Identificación</td>
+<td>Del proceso creador del fichero, del último que accedió al fichero, en qué forma lo hizo, etc.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Según el sistema concreto, una entrada de directorio puede ocupar desde una decena hasta varios miles de bytes. Por esta razón, la estructura de directorios suele almacenarse en el propio dispositivo que se está organizando, como un fichero especial.  La forma de almacenar los directorios en el dispositivo (estructura de datos del directorio) varía también de un sistema a otro. La forma más sencilla es la de una <strong><em>lista lineal</em></strong>, de forma que cada entrada se encuentra inmediatamente a continuación de la precedente. Esto sin embargo es muy caro en ejecución, pues la búsqueda de una entrada concreta suele exigir pasar por todas las anteriores (búsqueda lineal). Hay otros problemas, como el de qué hacer cuando se elimine una entrada (algunos sistemas la marcan como borrada para su posterior utilización, otros la incluyen en una lista de entradas libres).</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Otra opción es mantener una <strong><em>lista lineal ordenada</em></strong>, pero exige el mantener permanentemente ordenada la lista lo que complica excesivamente las operaciones de borrado y creación de entradas y la complicación del algoritmo de búsqueda. Puede pensarse entonces en emplear un <strong><em>árbol binario de búsqueda</em></strong>, que simplifica las operaciones antes mencionadas (y complica el algoritmo de búsqueda). </p>
+<h2 id="capas">Capas<a class="headerlink" href="#capas" title="Permanent link">¶</a></h2>
+<p>Las imágenes se construyen sobre una tecnología de <strong>sistema de ficheros por capas</strong>.
+Para crear una imagen, generalmente se crea el archivo de texto <code>dockerfile</code> formado por diferentes <strong>instrucciones</strong>. Cada línea representa una instrucción, y cada vez que se ejecuta el dockerfile se ejecutan dichas instrucciones de arriba a abajo.
+Estos <code>dockerfile</code>-s se almacenan como texto y se pueden compartir con facilidad, así como almacenarse en sistemas de control de versiones.
+Cada <strong>instrucción</strong> que se ejecuta cambia ligeramente el estado del sistema de archivos respecto a la instrucción anterior.
+La diferencia entre el estado del sistema de ficheros antes y después de cada instrucción se guarda en disco como un archivo, que conforma una <strong>capa</strong>.
+Cada <strong>imagen</strong> es un conjunto de capas que contienen los diferentes cambios que se van realizando sobre el sistema de archivos empaquetados.
+Al final del <code>dockerfile</code>, la última instrucción define el <strong>comando</strong> que se ejecutará cuando arranquemos el contenedor.
+Al ejecutar un comando a partir de la imagen creada, se ejecuta el comando especificado y se convierte en el proceso con PID 1 dentro del árbol virtual de procesos.
+El contenedor seguirá en marcha mientras el proceso creado siga en ejecución.</p>
+<h2 id="capas_1">Capas<a class="headerlink" href="#capas_1" title="Permanent link">¶</a></h2>
+<p>Las imágenes se construyen sobre una tecnología de <strong>sistema de ficheros por capas</strong>.
+Para crear una imagen, generalmente se crea el archivo de texto <code>dockerfile</code> formado por diferentes <strong>instrucciones</strong>. Cada línea representa una instrucción, y cada vez que se ejecuta el dockerfile se ejecutan dichas instrucciones de arriba a abajo.
+Estos <code>dockerfile</code>-s se almacenan como texto y se pueden compartir con facilidad, así como almacenarse en sistemas de control de versiones.
+Cada <strong>instrucción</strong> que se ejecuta cambia ligeramente el estado del sistema de archivos respecto a la instrucción anterior.
+La diferencia entre el estado del sistema de ficheros antes y después de cada instrucción se guarda en disco como un archivo, que conforma una <strong>capa</strong>.
+Cada <strong>imagen</strong> es un conjunto de capas que contienen los diferentes cambios que se van realizando sobre el sistema de archivos empaquetados.
+Al final del <code>dockerfile</code>, la última instrucción define el <strong>comando</strong> que se ejecutará cuando arranquemos el contenedor.
+Al ejecutar un comando a partir de la imagen creada, se ejecuta el comando especificado y se convierte en el proceso con PID 1 dentro del árbol virtual de procesos.
+El contenedor seguirá en marcha mientras el proceso creado siga en ejecución.</p>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.19047be9.min.js"></script>
+<script src="../../javascripts/mathjax.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</body>
+</html>

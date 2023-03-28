@@ -1,0 +1,1168 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../" rel="prev"/>
+<link href="../02_introduccion_sistemas_operativos/" rel="next"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.1.4" name="generator"/>
+<title>Introducción a los Sistemas Informáticos - obsidian-mkdocs template</title>
+<link href="../../assets/stylesheets/main.240905d7.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="pink" data-md-color-scheme="default" dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#introduccion-a-los-sistemas-informaticos">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="obsidian-mkdocs template" class="md-header__button md-logo" data-md-component="logo" href="../.." title="obsidian-mkdocs template">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            obsidian-mkdocs template
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Introducción a los Sistemas Informáticos
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="pink" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="blue" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="pink" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"></path></svg>
+</label>
+</form>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="obsidian-mkdocs template" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="obsidian-mkdocs template">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+    obsidian-mkdocs template
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        Obsidian Notes
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Features
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Features
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Features/LaTeX%20Math%20Support/">
+        LaTeX Math Support
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Features/Mermaid%20Diagrams/">
+        Mermaid diagrams
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Features/Text%20Formatting/">
+        Text Formatting
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Topic 1
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Topic 1
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Topic%201/Note%201/">
+        Note 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Topic%201/Note%202/">
+        Note 2
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Docs
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Docs
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../">
+        Sistemas Informáticos
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Introducción a los Sistemas Informáticos
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Introducción a los Sistemas Informáticos
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fundamentos-de-los-sistemas-informaticos-y-las-maquinas-virtuales">
+    FUNDAMENTOS DE LOS SISTEMAS INFORMÁTICOS Y LAS MÁQUINAS VIRTUALES
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#componentes-hardware-de-un-sistema-informatico">
+    Componentes hardware de un sistema informático.
+  </a>
+<nav aria-label="Componentes hardware de un sistema informático." class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#microprocesador">
+    Microprocesador
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#memoria-principal">
+    Memoria principal
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#placa-base">
+    Placa base
+  </a>
+<nav aria-label="Placa base" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chipset">
+    Chipset
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#zocalo-del-microprocesador">
+    Zócalo del microprocesador
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ranuras-de-memoria-ram">
+    Ranuras de memoria RAM
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ranuras-de-expansion">
+    Ranuras de expansión
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bios-basic-input-output-system">
+    BIOS (Basic Input Output System)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conectores-internos">
+    Conectores internos
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conectores-externos">
+    Conectores externos
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dispositivos-de-almacenamiento-secundario">
+    Dispositivos de almacenamiento secundario
+  </a>
+<nav aria-label="Dispositivos de almacenamiento secundario" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#medios-de-almacenamiento-flash">
+    Medios de almacenamiento Flash
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#medios-de-almacenamiento-optico">
+    Medios de almacenamiento óptico
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fuente-de-alimentacion">
+    Fuente de alimentación
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#perifericos">
+    Periféricos
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#normas-de-seguridad-y-prevencion-de-riesgos-laborales">
+    Normas de seguridad y prevención de riesgos laborales
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#secuencia-de-montaje">
+    Secuencia de Montaje
+  </a>
+<nav aria-label="Secuencia de Montaje" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#apertura-de-la-caja">
+    Apertura de la caja
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#instalacion-de-la-fuente">
+    Instalación de la fuente
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#instalacion-de-la-placa-base">
+    Instalación de la Placa base
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#instalacion-de-un-disco-duro">
+    Instalación de un Disco Duro
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#instalacion-de-tarjetas">
+    Instalación de Tarjetas
+  </a>
+<nav aria-label="Instalación de Tarjetas" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tarjeta-de-red">
+    Tarjeta de red
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tarjeta-de-video">
+    Tarjeta de video
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cables-internos-conexiones-de-alimentacion-de-la-motherboard">
+    Cables internos: conexiones de alimentación de la motherboard.
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conectores-de-alimentacion-sata">
+    Conectores de alimentación SATA
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conectores-de-alimentacion-molex">
+    Conectores de alimentación Molex
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conectores-de-alimentacion-berg">
+    Conectores de alimentación Berg
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cables-datos">
+    Cables datos
+  </a>
+<nav aria-label="Cables datos" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cables-de-datos-pata-ide">
+    Cables de datos PATA (IDE)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cables-de-datos-sata">
+    Cables de datos SATA
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cables-de-datos-de-unidad-de-disquete">
+    Cables de datos de unidad de disquete
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cables-del-panel-frontal">
+    Cables del Panel frontal
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../02_introduccion_sistemas_operativos/">
+        Introducción a los Sistemas Operativos
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../03_virtualizacion/">
+        Arranque de un Sistema Operativo
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+          Docker
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_5">
+<span class="md-nav__icon md-icon"></span>
+          Docker
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../docker/00_TOC/">
+        00 TOC
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../docker/01_que_es/">
+        ¿Qué es Docker y para qué se utiliza? [[1](http://apuntes.ucr.ac.cr/index.php/Docker,_aplicaciones_en_cualquier_parte)]
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../docker/02_instalacion/">
+        [Instalación de Docker](http://apuntes.ucr.ac.cr/index.php/Docker,_aplicaciones_en_cualquier_parte)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../docker/03_conceptos_clave/">
+        Conceptos clave
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../docker/Docker%20en%20python%20y%20django/">
+        Docker en python y django
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../docker/capas/">
+        Capas
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../docker/contenedores/">
+        Contenedores
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../docker/docker_hub/">
+        Docker hub
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../docker/gestion_imagenes/">
+        Gestion imagenes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../docker/imagenes/">
+        Imágenes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../docker/instalacion_del_plugin_en_ZSH/">
+        instalacion del plugin en ZSH
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../docker/introduccion/">
+        Introducción
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../docker/redes/">
+        Redes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../docker/volumenes/">
+        Volúmenes
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fundamentos-de-los-sistemas-informaticos-y-las-maquinas-virtuales">
+    FUNDAMENTOS DE LOS SISTEMAS INFORMÁTICOS Y LAS MÁQUINAS VIRTUALES
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#componentes-hardware-de-un-sistema-informatico">
+    Componentes hardware de un sistema informático.
+  </a>
+<nav aria-label="Componentes hardware de un sistema informático." class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#microprocesador">
+    Microprocesador
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#memoria-principal">
+    Memoria principal
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#placa-base">
+    Placa base
+  </a>
+<nav aria-label="Placa base" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chipset">
+    Chipset
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#zocalo-del-microprocesador">
+    Zócalo del microprocesador
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ranuras-de-memoria-ram">
+    Ranuras de memoria RAM
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ranuras-de-expansion">
+    Ranuras de expansión
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bios-basic-input-output-system">
+    BIOS (Basic Input Output System)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conectores-internos">
+    Conectores internos
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conectores-externos">
+    Conectores externos
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dispositivos-de-almacenamiento-secundario">
+    Dispositivos de almacenamiento secundario
+  </a>
+<nav aria-label="Dispositivos de almacenamiento secundario" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#medios-de-almacenamiento-flash">
+    Medios de almacenamiento Flash
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#medios-de-almacenamiento-optico">
+    Medios de almacenamiento óptico
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fuente-de-alimentacion">
+    Fuente de alimentación
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#perifericos">
+    Periféricos
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#normas-de-seguridad-y-prevencion-de-riesgos-laborales">
+    Normas de seguridad y prevención de riesgos laborales
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#secuencia-de-montaje">
+    Secuencia de Montaje
+  </a>
+<nav aria-label="Secuencia de Montaje" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#apertura-de-la-caja">
+    Apertura de la caja
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#instalacion-de-la-fuente">
+    Instalación de la fuente
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#instalacion-de-la-placa-base">
+    Instalación de la Placa base
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#instalacion-de-un-disco-duro">
+    Instalación de un Disco Duro
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#instalacion-de-tarjetas">
+    Instalación de Tarjetas
+  </a>
+<nav aria-label="Instalación de Tarjetas" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tarjeta-de-red">
+    Tarjeta de red
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tarjeta-de-video">
+    Tarjeta de video
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cables-internos-conexiones-de-alimentacion-de-la-motherboard">
+    Cables internos: conexiones de alimentación de la motherboard.
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conectores-de-alimentacion-sata">
+    Conectores de alimentación SATA
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conectores-de-alimentacion-molex">
+    Conectores de alimentación Molex
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conectores-de-alimentacion-berg">
+    Conectores de alimentación Berg
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cables-datos">
+    Cables datos
+  </a>
+<nav aria-label="Cables datos" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cables-de-datos-pata-ide">
+    Cables de datos PATA (IDE)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cables-de-datos-sata">
+    Cables de datos SATA
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cables-de-datos-de-unidad-de-disquete">
+    Cables de datos de unidad de disquete
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cables-del-panel-frontal">
+    Cables del Panel frontal
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="introduccion-a-los-sistemas-informaticos">Introducción a los Sistemas Informáticos<a class="headerlink" href="#introduccion-a-los-sistemas-informaticos" title="Permanent link">¶</a></h1>
+<h2 id="fundamentos-de-los-sistemas-informaticos-y-las-maquinas-virtuales">FUNDAMENTOS DE LOS SISTEMAS INFORMÁTICOS Y LAS MÁQUINAS VIRTUALES<a class="headerlink" href="#fundamentos-de-los-sistemas-informaticos-y-las-maquinas-virtuales" title="Permanent link">¶</a></h2>
+<p>Objetivos: </p>
+<ul>
+<li>Aprender cuáles son y cómo actúan las unidades funcionales de un sistema informático. </li>
+<li>Conocer las funciones de los principales componentes físicos de un sistema informático. </li>
+<li>Reconocer  los  componentes  físicos  de  un  sistema  informático  y  mecanismos  de interconexión. </li>
+<li>Verificar el proceso de puesta en marcha del equipo. </li>
+<li>Clasificar, instalar y configurar diferentes dispositivos periféricos. </li>
+<li>Conocer el concepto de máquina virtual y sus ventajas- </li>
+<li>Operar  las  máquinas  respetando  las  normas  de  seguridad  y  las  recomendaciones ergonómicas. </li>
+</ul>
+<p>Arquitectura de un sistema informático. Modelos. </p>
+<p>Un <strong>sistema informático</strong> es una máquina que acepta unos datos de entrada, los procesa y genera unos resultados. En todo sistema informático se distinguen dos partes claramente diferenciadas y necesarias: </p>
+<ul>
+<li><strong>Hardware</strong>: conjunto de elementos físicamente tangibles. </li>
+<li><strong>Software</strong>:  parte  intangible  formada  por  instrucciones  o  datos  que  pueden  ser interpretados o procesados. </li>
+</ul>
+<p>Los sistemas informáticos actuales tienen como base las arquitecturas de  <em>Von Neumann y Harvard</em>. </p>
+<p>El modelo de Von Neumann consta de las siguientes partes: </p>
+<p>1 <strong>Unidad de procesamiento</strong>: se encarga de la ejecución e interpretación de instrucciones y datos formada por unidad aritmético lógica (ALU), unidad de control y registros de almacenamiento. </p>
+<p>1) <strong>Memoria</strong>: almacena instrucciones y datos. 
+1) <strong>Dispositivos de entrada/salida</strong>: elementos que actúan de interfaz con el resto de las partes. </p>
+<p><img alt="01" src="SI23/docs/docs/img01/01.png"/></p>
+<p>En el modelo de Von Neumann las diferentes unidades funcionales se interconectan mediante buses de comunicación o buses del sistema. Estos pueden ser: </p>
+<ul>
+<li><strong>Buses de instrucciones:</strong> líneas de comunicación que transmiten instrucciones. </li>
+<li><strong>Buses de datos:</strong> líneas de comunicación que transmiten únicamente datos. </li>
+<li><strong>Buses de direcciones:</strong> líneas de comunicación empleadas para acceder a las distintas memorias, indicando una dirección de acceso de lectura o escritura. </li>
+</ul>
+<p>En  el  modelo  Harvard  el  acceso  a  datos  e  instrucciones  se  realiza  simultáneamente  al encontrarse en caminos distintos. </p>
+<h2 id="componentes-hardware-de-un-sistema-informatico">Componentes hardware de un sistema informático.<a class="headerlink" href="#componentes-hardware-de-un-sistema-informatico" title="Permanent link">¶</a></h2>
+<p>El hardware de un equipo consta de multitud de componentes, los más importantes son: el microprocesador,  la  placa  base,  la  memoria  principal,  los  dispositivos  de  almacenamiento secundario, la batería o fuente de alimentación y los periféricos. </p>
+<h3 id="microprocesador">Microprocesador<a class="headerlink" href="#microprocesador" title="Permanent link">¶</a></h3>
+<p>El microprocesador es un circuito integrado encapsulado de altísimo nivel de integración en los componentes que aloja. El microprocesador contiene una o más unidades centrales de proceso (CPU). Este es el centro neurálgico de procesamiento del sistema. Las partes más importantes de una CPU son las siguientes: </p>
+<p>1) <strong>Unidad de control (UC):</strong> encargada del procesamiento, interpretación y ejecución de instrucciones y datos.  Envía al resto de componentes señales de control, estado o situación para la correcta automatización de las diferentes funciones del sistema de manera sincronizada. 
+1) <strong>Unidad aritmético lógica (UAL):</strong> componente encargado de realizar cálculos aritméticos y lógicos. 
+1) <strong>Registros:</strong> memorias <em>temporales</em> de poca capacidad y alta velocidad. </p>
+<p>Los microprocesadores actuales alojan la CPU, además de otros muchos elementos. Los más importantes son: </p>
+<ul>
+<li><strong>Núcleo</strong>: estructura que aloja las unidades funcionales de una CPU. En la actualidad, es común que los micros contengan más de un núcleo. Cada núcleo es capaz de ejecutar una  instrucción,  sincronizándose  con  el  resto  para  realizar  varias  tareas simultáneamente. </li>
+<li><strong>Memorias caché</strong>: memorias temporales, extremadamente rápidas y cercanas al núcleo. Atendiendo a su cercanía con este, suelen encontrarse tres niveles: </li>
+<li><strong>L1 o de nivel 1</strong>: normalmente situada dentro de cada núcleo. </li>
+<li><strong>L2 o de nivel 2</strong>: suele estar situada fuera de los núcleos, pero compartida entre varios. Actúa de intermediaria de los niveles L1 y L3. </li>
+<li><strong>L3 o de nivel 3</strong>: suele estar situada fuera de los núcleos, pero compartida por todos ellos. Este nivel recibe o entrega instrucciones y datos a o desde los módulos de memoria. </li>
+<li><strong>Controlador de memoria</strong>: la memoria RAM es gestionada por este componente. </li>
+<li><strong>Controlador gráfico</strong>: hace referencia a la capacidad de computación de cálculo para gráficos. No todos los procesadores integran esta característica, puesto que las tarjetas gráficas dedicadas a este propósito poseen mayor rendimiento.</li>
+</ul>
+<p>En cuanto a las características más importantes de los procesadores, destacan: </p>
+<ol>
+<li><em>Velocidad o frecuencia:</em> medida en gigahercios (GHz), hace referencia al número de ciclos que tienen que transcurrir para ejecutar una instrucción o parte de ella en cada CPU. A mayor frecuencia, mayor velocidad de procesamiento. </li>
+<li><em>Número  de  hilos:</em>  los  procesadores  pueden  ejecutar,  al  mismo  tiempo,  hilos  de procesamiento, es decir, tareas como parte de un mismo proceso. Este concepto se refiere al número de hilos con los que los núcleos del procesador son capaces de trabajar en paralelo. </li>
+<li><em>Nivel de integración:</em> hace referencia a la medida de nanómetros (nm) empleados para la fabricación del procesador, aplicando técnicas litográficas. Cuanto menor sea esta cantidad, mayor nivel de integración tendrá al poder incluir en el mismo espacio mayor número de componentes. </li>
+<li><em>Consumo:</em> medido en watios (W), depende del voltaje e intensidad que necesite el procesador.  </li>
+<li><em>Potencia de disipación térmica (TDP):</em> hace referencia a watios térmicos, con objeto de buscar una solución de refrigeración al procesador. Los equipos móviles se distinguen claramente por su bajo TDP. </li>
+</ol>
+<p>Link: <a href="https://territoriointel.xataka.com/que-relacion-cpu-ram-almacenamiento-decide-rendimiento/?utm_source=Outbrain&amp;utm_medium=Discovery&amp;utm_campaign=BTS-Jim-Parsons&amp;utm_content=">¿Por qué la relación entre CPU, RAM y almacenamiento decide el rendimiento?</a></p>
+<h3 id="memoria-principal">Memoria principal<a class="headerlink" href="#memoria-principal" title="Permanent link">¶</a></h3>
+<p>La memoria de almacenamiento principal se encuentra conectada a la CPU, a la cual abastece almacenando instrucciones o datos de forma temporal, es decir, cuando carece de energía, su contenido desaparece. </p>
+<p>La memoria principal engloba varios tipos de memoria: registros, memoria caché y memoria RAM.
+<img alt="02" src="SI23/docs/docs/img01/02.png"/>
+La memoria principal está constituida por: </p>
+<p>1) <strong><em>Registros</em></strong>: estructuras de almacenamiento pertenecientes al núcleo de la CPU de muy poca capacidad, pero cuyo acceso y escritura es extremadamente rápido. La mayoría se encuentran en la UC y la UAL. El tamaño de los registros define la arquitectura, siendo de 32 o 64 bits.</p>
+<p>2) <strong><em>Memoria caché</em></strong>: memoria intermedia entre los registros y la memoria RAM, que se encuentra en los núcleos o en el microprocesador. Cuanto mayor es su capacidad, mayor capacidad de cómputo tendrá el micro, ya que disminuirán las veces que esta tenga  que  recargarse  accediendo  a  la  memoria  RAM  y  volcar  nuevos  datos  o instrucciones.  Suelen  existir  tres  niveles  (L1,  L2  y  L3),  donde  se  alojan  de  manera compartida o  separada  las  instrucciones y  los  datos.  Es  común  que  se  encuentren separados en algún nivel para aumentar la velocidad de procesamiento, normalmente en L2 y L1. </p>
+<p>4) <strong><em>Memoria  RAM</em></strong>:  memoria  externa  al  microprocesador  que  se  agrupa  en  forma  de módulos de memoria instalados en la placa base. Sus principales características son: </p>
+<ol>
+<li><strong><em>Capacidad</em></strong>: tamaño especificado en gigabytes (GB). </li>
+<li><strong><em>Velocidad</em></strong>:  frecuencia  de  trabajo  interna  de  cada  módulo.  Se  mide  en gigahercios (GHz). </li>
+<li><strong><em>Voltaje</em></strong>: tensión necesaria para su funcionamiento (V). </li>
+<li><strong><em>Latencias</em></strong>: especifica los tiempos de acceso a los datos de los chips del módulo de memoria. Cuanto menor sean las latencias, más velocidad tendrá el módulo en localizar y disponer de los datos. Se mide en ciclos de reloj. </li>
+<li><strong><em>Número de canales de comunicación con el procesador</em></strong>: el número de canales entre la memoria y el procesador para transferir información simultáneamente. Los módulos deben estar desarrollados con tecnología multicanal. Para ello, es necesario emplear parejas o cuartetos de módulos, respectivamente. Esto hará que se incremente la velocidad de transferencia al trabajar el procesador en paralelo con varios módulos. </li>
+<li><strong><em>Tipo de módulo</em></strong>: los chips de memoria se encapsulan en módulos DIMM o SODIMM, según sean para equipos de sobremesa o portátiles respectivamente. </li>
+<li><strong><em>Tecnología</em></strong>: los módulos de memoria actuales emplean una tecnología de tipo SDRAM DDR4. Son memorias de acceso aleatorio dinámico (DRAM), empleando doble recarga en su versión 4 (DDR4). En la siguiente figura, la muesca situada entre los contactos metálicos, en la parte inferior de cada módulo, se encuentra en posiciones distintas para evitar errores en la colocación de los módulos sobre los zócalos de memoria. Los módulos de memoria con tecnología SDRAM-DDR4 ofrecen mejoras con respecto a sus predecesoras SDRAM-DDR3: menos voltaje, mayor frecuencia, aumentan la densidad de los chips de memoria y presentan un mayor ahorro energético. </li>
+</ol>
+<p><img alt="03" src="SI23/docs/docs/img01/03.png"/></p>
+<h3 id="placa-base">Placa base<a class="headerlink" href="#placa-base" title="Permanent link">¶</a></h3>
+<p>También llamada <strong><em>motherboard</em></strong>. La placa base es el circuito impreso principal de todo sistema informático, que conecta todos los componentes hardware directa o indirectamente. Se puede considerar la pieza fundamental (junto con la CPU), ya que determina la potencia de cálculo o procesamiento, la capacidad de expansión, el almacenamiento, el tipo de alimentación o el tipo de caja. </p>
+<p>Las placas base se rigen por los llamados <strong><em>factores de forma</em></strong>. Estos determinan entre otros aspectos, las medidas de la placa, la disposición y lugar donde se alojan sus componentes (zócalos, conectores, buses de expansión), la potencia… </p>
+<p>Los factores de forma más utilizados son: </p>
+<ul>
+<li><strong><em>ATX</em></strong>. La disposición de sus componentes mejora la refrigeración. Es el más utilizado actualmente.  Presenta  variantes  como  Micro-ATX  o  Mini-ATX,  que  reducen  las dimensiones de las placas base y están orientadas a equipos menos potentes, reducido consumo y escasa capacidad de expansión. </li>
+<li><strong><em>Variantes ITX</em></strong>. Orientados a equipos de muy bajo consumo y reducidas dimensiones. Prácticamente  todos  sus  componentes  están  integrados  en  la  misma  placa  base, consiguiendo reducir las dimensiones, pero afectando a su capacidad de expansión.</li>
+</ul>
+<p>Los principales componentes de una placa base son: </p>
+<h4 id="chipset">Chipset<a class="headerlink" href="#chipset" title="Permanent link">¶</a></h4>
+<p>Es  el  principal  circuito  integrado  y  encapsulado  (microchip)  en  la  placa  base,  que  resulta fácilmente distinguible por su tamaño y localización. </p>
+<p><img alt="" src="SI23/docs/docs/img01/04.png"/></p>
+<p>Su labor es gestionar todos los componentes  de la placa base, dotándolos de sincronismo  a través de diferentes buses. Por ello, directa  o indirectamente,  el  chipset  siempre  interviene en cualquier operación. Tanto es  así, que éste determina el procesador que se  puede instalar en la placa base, la memoria  RAM, la cantidad de buses disponibles para  ranuras  de  expansión,  el  arranque  del  sistema,  la  cantidad  y  tipos  de  conectores  internos  y  externos,  la  capacidad  de  overclocking, etc. </p>
+<p>Las funciones del chipset son: </p>
+<ul>
+<li>Coordinar  la  asociación  entre  los  componentes  de  gran  capacidad  de transferencia de información o procesamiento, como el procesador, la memoria, buses PCI Express de gráficos. </li>
+<li>Actuar  de  concentrador  de  componentes  de  entrada  y  salida,  así como  de dispositivos de baja velocidad. </li>
+</ul>
+<p>En las placas base ATX, el chipset se sitúa al sureste del zócalo del procesador y son fácilmente distinguibles al ser chips grandes y disponer de un gran disipador. </p>
+<h4 id="zocalo-del-microprocesador">Zócalo del microprocesador<a class="headerlink" href="#zocalo-del-microprocesador" title="Permanent link">¶</a></h4>
+<p>El socket o zócalo del micro es el lugar donde se inserta éste. Existen principalmente dos tipos: </p>
+<ul>
+<li><strong><em>ZIF  o  PGA  (Pin  Grid  Array):</em></strong>  consiste  en  una  estructura  de  plástico  con  pequeños agujeros, donde se insertan las patillas del microprocesador. Este se coloca en el socket sin ejercer presión, ya que dispone de una palanca para encajarlo sin fuerza. </li>
+</ul>
+<p><img alt="" src="SI23/docs/docs/img01/05.png"/></p>
+<ul>
+<li><strong><em>LGA (Land Grid Array):</em></strong> dispone de una base con contactos que se comunican con la placa  base, sobre  la  que cierra  una estructura  de metal  con  forma  de ventana.  El procesador dispone de contactos y no patillas, por lo que establece la comunicación por presión gracias a dicha estructura. La instalación en este socket es sencilla, con mucho menos riesgo de dañar el micro. Permite mayor cantidad de contactos. </li>
+</ul>
+<h4 id="ranuras-de-memoria-ram">Ranuras de memoria RAM<a class="headerlink" href="#ranuras-de-memoria-ram" title="Permanent link">¶</a></h4>
+<p><img alt="" src="SI23/docs/docs/img01/06.png"/></p>
+<p>Las ranuras de memoria son espacios destinados a alojar los módulos de memoria RAM. Actualmente, los  más utilizados son ranuras DIMM SDRAM-DDR4 con  288 pines. Todas las ranuras disponen de una marca  para  alinear  el  módulo  correctamente,  así  como  contenedores laterales para aumentar la sujeción de  este a la placa base.   </p>
+<p>Las  placas  base  disponen  de  tecnología  de  doble,  triple  o  cuádruple  canal  (llamadas  <strong><em>Dual  Channel,  Triple  Channel  o  Quad  Channel</em></strong>).  Así,  se  consigue  acceder  a  varios  módulos  simultáneamente,  mejorando la velocidad de acceso a la memoria RAM  por  parte  del  procesador.  Ello  gracias  a  duplicar,  triplicar o cuadruplicar el canal de 64 bits del <strong><em>single  channel</em></strong> por defecto.  </p>
+<p>Las  placas  base  presentan  las  ranuras  de  memoria  RAM asociadas con colores (parejas, tríos o cuartetos)  para hacer uso de esta característica.  </p>
+<h4 id="ranuras-de-expansion">Ranuras de expansión<a class="headerlink" href="#ranuras-de-expansion" title="Permanent link">¶</a></h4>
+<p><img alt="" src="SI23/docs/docs/img01/07.png"/></p>
+<p>Son los módulos encargados de alojar las  tarjetas  de  expansión  para  ampliar  las  características del equipo. Según el ancho  de  banda  y  la  velocidad  de  transmisión,  encontramos  varios  tipos  de  buses  de  expansión,  los  cuales  emplean  diferentes  ranuras.  El  bus  más  empleado  es  el  PCI  Express, o PCIe, que se implementa hasta  con 16 líneas (lanes) de datos. Cada línea  dispone de un ancho de banda de 2GB/s en  su versión 4.0. Las ranuras de expansión PCI  Express más comunes según sus lanes y su  ancho de banda son:  </p>
+<ul>
+<li>PCIe x1 v4.0:2 GB/s </li>
+<li>PCIe x4 v4.0:16 GB/s </li>
+<li>PCIe x16 v4.0:32 GB/s </li>
+</ul>
+<p>Las distintas versiones de PCIe son compatibles entre sí. Se emplean para alojar tarjetas gráficas, tarjetas de sonido, dispositivos de almacenamiento secundario, tarjetas adaptadoras de red, etc. </p>
+<h4 id="bios-basic-input-output-system">BIOS (Basic Input Output System)<a class="headerlink" href="#bios-basic-input-output-system" title="Permanent link">¶</a></h4>
+<p>También llamado ROM BIOS. Es un chip que se encuentra físicamente visible en la placa base y se encarga de varias tareas: </p>
+<ul>
+<li>Comprobar el sistema y lanzar su arranque. </li>
+<li>Realizar funciones básicas de E/S con el sistema operativo funcionando. </li>
+<li>Configurar el equipo a través de una aplicación llamada BIOS Setup Utility. </li>
+</ul>
+<p>Muchas placas disponen de dos BIOS. En caso de que una se corrompa, la otra se activa, impidiendo que el equipo deje de funcionar. </p>
+<p>La BIOS tiene asociada una memoria RAM-CMOS que almacena de manera temporal los datos de la configuración del sistema. Estos datos aparecen cuando accedemos al BIOS Setup Utility: fecha y hora del sistema, medios de arranque, periféricos, buses, overclocking, chipsets… </p>
+<p>Al ser la RAM-CMOS una memoria volátil, la placa base tiene una pila que la alimenta e impide que desaparezca su configuración. Si la pila pierde su carga, es necesario ajustar algunos de estos valores para que el sistema arranque correctamente. </p>
+<p>Las placas base también disponen de unos pines o botones para resetear la memoria RAM- CMOS, si se desea volver a ajustar la configuración del sistema a la versión de fábrica.</p>
+<p><img alt="" src="SI23/docs/docs/img01/08.png"/> </p>
+<p>En la foto puede distinguirse:</p>
+<ul>
+<li>
+<p>La pila</p>
+</li>
+<li>
+<p>Sistema de doble BIOS (backup Bios y Main Bios) </p>
+</li>
+<li>
+<p>Pines de reseteo de la memoria </p>
+</li>
+</ul>
+<h4 id="conectores-internos">Conectores internos<a class="headerlink" href="#conectores-internos" title="Permanent link">¶</a></h4>
+<p>Algunos de los conectores más importantes son: </p>
+<ul>
+<li><em>Conector  SATA:</em>  empleado  para  la  transferencia  de  datos  entre  el  chipset  y  los dispositivos de almacenamiento secundario. Es el conector que más se utiliza para conectar discos duros. Sustituyó al antiguo IDE. </li>
+<li><em>Conector  M.</em>2:  se  usa  especialmente  para  almacenamiento  (discos  duros  SSD)  o conectividad en equipos de reducidas dimensiones, aprovechando el espacio en la placa base. Trabaja con buses SATA o PCIe, empleando distintos conectores cada uno de ellos. </li>
+<li><em>Conectores de ventiladores:</em> los ventiladores refrigeran el procesador, la caja o incluso algunos chipsets. </li>
+<li><em>Conectores USB:</em> encargados de conectar, a través de un cable, los conectores USB del frontal de la caja de los equipos. </li>
+</ul>
+<p><img alt="" src="12.png"/></p>
+<ul>
+<li><em>Conectores del panel frontal:</em> se suelen presentar por colores, detallando en la placa base la correspondencia de cada conector. Los más empleados son: </li>
+<li><em>Botón de encendido.</em> </li>
+<li><em>Botón de reset.</em> </li>
+<li><em>Led de encendido.</em> </li>
+<li><em>Led de uso de disco duro.</em> </li>
+<li><em>Conectores de alimentación:</em> nutren de energía eléctrica a la placa base y a todos sus componentes.  Es  habitual  encontrar  un  conector  de  20 o  24  pines  que  suministra alimentación a la placa base, y otro de 4 u 8 pines que alimenta al procesador (se encuentra cerca). </li>
+</ul>
+<p><img alt="" src="SI23/docs/docs/img01/13.png"/></p>
+<h4 id="conectores-externos">Conectores externos<a class="headerlink" href="#conectores-externos" title="Permanent link">¶</a></h4>
+<p>La conexión entre periféricos y el equipo se realiza a través de conectores de comunicación externos anclados al lateral oeste de la placa base. Estos conectores utilizan diferentes buses de comunicación hacia el chipset. </p>
+<p>Los principales conectores externos son: </p>
+<ul>
+<li><strong><em>eSATA</em></strong>: utilizado para conectar dispositivos de almacenamiento externo. </li>
+<li><strong><em>Thunderbolt</em></strong>: para conectar periféricos de almacenamiento o para transmitir vídeo a periféricos. Emplea tecnología óptica. </li>
+</ul>
+<p><img alt="" src="SI23/docs/docs/img01/14.png"/></p>
+<ul>
+<li><strong><em>USB</em></strong>: conector empleado para conectar periféricos, ratón, teclado, impresora, discos duros externos, smartphones… Existen varias versiones de este conector. </li>
+</ul>
+<p><img alt="" src="15.png"/></p>
+<ul>
+<li><strong><em>Conectores de vídeo</em></strong>: transmiten señales de vídeo a monitores. Los más empleados son D-SUB (VGA),  DVI, Displayport y  HDMI  (los  dos  últimos también  pueden  transmitir audio). </li>
+<li><strong><em>Conector Ethernet LAN</em></strong>: llamado también RJ45, empleado para comunicarse por cable de par trenzado en una red. </li>
+<li><strong><em>Conectores  de  audio  Jack  y  S/PDIF</em></strong>:  transmiten  sonido  analógico  y  digital respectivamente. </li>
+<li><strong><em>Conectores PS/2</em></strong>: para conectar teclados y ratones. </li>
+</ul>
+<p><img alt="" src="16.png"/></p>
+<h3 id="dispositivos-de-almacenamiento-secundario">Dispositivos de almacenamiento secundario<a class="headerlink" href="#dispositivos-de-almacenamiento-secundario" title="Permanent link">¶</a></h3>
+<p>Se emplean  para  almacenar  información  de  manera  permanente.  Hay  que  distinguir  los dispositivos de los medios, ya que los primeros alojan a los segundos, los cuales contienen la información.  Pueden  estar  juntos  (discos  duros  mecánicos)  o  separados  (tarjeta  Flash  SD necesita un lector de tarjetas SD para leer o escribir en ella). Los principales dispositivos o medios de almacenamiento no volátil se clasifican en: </p>
+<h4 id="medios-de-almacenamiento-flash">Medios de almacenamiento Flash<a class="headerlink" href="#medios-de-almacenamiento-flash" title="Permanent link">¶</a></h4>
+<p>Casi todos estos tipos de medios emplean tecnología Flash NAND, haciendo referencia a las puertas lógicas que almacenan los bits. Por ejemplo: </p>
+<ul>
+<li><strong><em>Disco  duro  SSD  (Solid  State  Drive):</em></strong>  dispositivo  de  estado  sólido,  llamado  así  en contraposición a los discos duros magnéticos que presentan partes móviles. </li>
+<li><strong><em>Tarjetas de memoria:</em></strong> aunque existe multitud de tipos y con distintas capacidades, las más utilizadas son las SD y CompactFlash, en sus diferentes formatos. Los dispositivos donde se utilizan suelen ser portátiles, es decir, cámaras de fotos, móviles, consolas… </li>
+</ul>
+<p><img alt="" src="017.png"/></p>
+<p>Dispositivos de almacenamiento magnético </p>
+<ul>
+<li><strong><em>Disco duro mecánico:</em></strong> formado por un conjunto de discos de material rígido apilados sobre el mismo eje rotatorio. Cada disco consta de dos caras con pistas concéntricas en cada una, susceptibles de ser magnetizadas y alterar así su estado, para almacenar ceros o unos. Entre cada cara se encuentran los cabezales de lectura y escritura que actúan sobre las pistas. </li>
+</ul>
+<p><img alt="" src="018.png"/></p>
+<ul>
+<li><strong><em>Cintas:</em></strong> medio de almacenamiento formado por una banda de plástico flexible que contiene pistas aptas de ser magnetizadas y que se recoge sobre sí para distribuirlo o almacenarlo de forma segura. Estos medios de almacenamiento se utilizan en centros de  procesos  de  datos  como  formas  de  <em>backup</em>,  ya  que  son  económicas  y  de  gran capacidad de almacenamiento, aunque lentas. </li>
+</ul>
+<h4 id="medios-de-almacenamiento-optico">Medios de almacenamiento óptico<a class="headerlink" href="#medios-de-almacenamiento-optico" title="Permanent link">¶</a></h4>
+<p>Los  más  comunes  son  CD  (Compact  Disk),  DVD  (Digital  Versatile  Disk)  y  Blu-ray.  Emplean diferente  tecnología  láser  para  grabar  o  leer  en  la  superficie  de  los  discos,  almacenando información en forma de crestas y surcos. La capacidad también es un aspecto importante entre ellos, ya que cada uno puede tener: </p>
+<ul>
+<li>CD: hasta 700 MB. </li>
+<li>DVD: hasta 17 GB. </li>
+<li>Blu-ray: hasta 128 GB. </li>
+</ul>
+<p>Para leer, grabar o regrabar información necesitan unidades ópticas hábiles a una determinada velocidad, representada por “X”. </p>
+<p>Están en decadencia debido al auge del almacenamiento en la nube, discos duros externos (muy compactos y portables) y almacenamiento Flash. </p>
+<p>Los medios de almacenamiento secundario más empleados en la pequeña y median empresa, son los medios Flash y discos duros mecánicos. Las ventajas de cualquier dispositivo Flash son: menos consumo de energía, más ligeros, gran velocidad en operaciones de lectura y escritura, y más resistentes, al no incorporar partes móviles. </p>
+<p>Los dispositivos magnéticos son todavía una buena solución desde el punto de vista económico y de backup. </p>
+<h3 id="fuente-de-alimentacion">Fuente de alimentación<a class="headerlink" href="#fuente-de-alimentacion" title="Permanent link">¶</a></h3>
+<p>La  alimentación  eléctrica  en  cualquier  sistema  informático  es  fundamental,  ya  que  de  él dependen todos los componentes del equipo.  </p>
+<p>La fuente de alimentación es la encargada de proporcionar energía a la placa base, así como a todos los elementos que la rodean. Tiene tres objetivos principalmente: </p>
+<ol>
+<li>Suministrar energía a todos los componentes. </li>
+<li>Actuar de barrera o protección ante alteraciones (ruidos o picos) de la red eléctrica externa. </li>
+<li>Facilitar la extracción del flujo de aire caliente del sistema en equipos de sobremesa. </li>
+</ol>
+<p>La fuente de alimentación transforma la tensión de entrada de 230 voltios a valores inferiores, rectifica la corriente alterna en continua, filtra la señal y la estabiliza.</p>
+<p>En fuentes de alimentación para placas ATX, los voltajes de salida son de 3,3 V, 5 V, 12 V y -12 V. Además, según el componente a alimentar nos encontramos con distintos conectores y cables de alimentación.</p>
+<p><img alt="" src="019.png"/></p>
+<h3 id="perifericos">Periféricos<a class="headerlink" href="#perifericos" title="Permanent link">¶</a></h3>
+<p>Son los dispositivos a través de los cuales los usuarios interactúan con el sistema informático. Se clasifican en: </p>
+<ol>
+<li><strong><em>Dispositivos de entrada:</em></strong> permiten introducir información al sistema (ratón, teclado, micrófono…). </li>
+<li><strong><em>Dispositivos de salida:</em></strong> únicamente ofrecen al usuario información (pantalla, impresora, altavoces…). </li>
+<li><strong><em>Dispositivos de entrada y salida:</em></strong> ambas tareas. (Pantalla táctil). Podemos encontrar: </li>
+<li><strong><em>Dispositivos  de  almacenamiento:</em></strong>  permiten  almacenara  y  recuperar información (discos duros, DVD…). </li>
+<li><strong><em>Comunicación:</em></strong> permiten la comunicación entre ordenadores o elementos de interconexión de un sistema en red (tarjeta Ethernet o Wi-Fi). </li>
+</ol>
+<p>Los <strong>adaptadores</strong> permiten a los periféricos ser utilizados empleando otra conexión diferente a la  utilizada  por  el  sistema  informático  al  que  se  van  a  asociar.  Prácticamente  todos  los conectores disponen de una gran variedad de adaptadores (por ejemplo, PS/2 a USB, USB-A a USB-C, HDMI/VGA a Displayport…)</p>
+<h2 id="normas-de-seguridad-y-prevencion-de-riesgos-laborales">Normas de seguridad y prevención de riesgos laborales<a class="headerlink" href="#normas-de-seguridad-y-prevencion-de-riesgos-laborales" title="Permanent link">¶</a></h2>
+<p>Debemos adoptar unas recomendaciones ergonómicas y de seguridad básicas de cara a prevenir o minimizar cualquier riesgo laboral. </p>
+<p>En España, la Ley 31/1995, de prevención de riesgos laborales, establece la seguridad para el trabajador cuando realiza sus actividades laborales. Esta ley señala que “los trabajadores tienen derecho a una protección eficaz en materia de seguridad y salud en el trabajo”. </p>
+<p>Tanto el empresario como el trabajador tienen una serie de derechos y obligaciones en materia de riesgos laborales. Algunos de los derechos son: información a los trabajadores, evaluación de riesgos en el puesto de trabajo, formación o planes de emergencia ante riesgos graves. Para prevenir los riesgos laborales se debe: </p>
+<ol>
+<li>Adoptar un plan de prevención de riesgos laborales. </li>
+<li>Evaluar los riesgos. </li>
+<li>Planificar y ejecutar la actividad preventiva. </li>
+</ol>
+<p>En nuestro caso, destacamos las siguientes normas de seguridad y prevención con respecto a los equipos con pantallas de visualización: </p>
+<p>1) Pantalla: 
+   1. Los caracteres deben estar bien definidos y configurados de forma clara. 
+   1. El usuario deberá poder ajustar fácilmente la luminosidad y el contraste entre los caracteres y el fondo de la pantalla, y adaptarlos fácilmente al entorno. 
+   1. La pantalla deberá ser orientable e inclinable a voluntad, con facilidad para adaptarse a las necesidades del usuario. 
+   1. La pantalla no deberá tener reflejos ni reverberaciones que puedan molestar. 
+1) Teclado: 
+   1. El teclado deberá ser inclinable e independiente de la pantalla para permitir adoptar una postura cómoda que no provoque cansancio en los brazos o las manos. 
+   1. Tendrá que haber espacio suficiente delante del teclado para que el usuario pueda apoyar los brazos y las manos. 
+1) Mesa o superficie de trabajo: 
+   1. Debe tener dimensiones suficientes y permitir una colocación flexible de la pantalla, teclado, los documentos y el material accesorio. 
+   1. El espacio debe ser suficiente para permitir a los usuarios una posición cómoda. 
+1) Asiento de trabajo: 
+   1. Deberá ser estable, regulable en altura, proporcionando al usuario libertad de movimiento y procurándole una postura confortable. 
+1) Entorno: </p>
+<ol>
+<li>Debe existir un espacio de dimensiones suficiente para adoptar cambios de postura y movimientos de trabajo. </li>
+<li>La iluminación debe ser adecuada, evitando deslumbramientos y reflejos. </li>
+<li>El ruido no debe perturbar la atención del trabajador. </li>
+<li>Las condiciones atmosféricas de temperatura y humedad deben ser adecuada para el desarrollo del trabajo. </li>
+</ol>
+<p><img alt="" src="020.png"/></p>
+<p>Cuando nos sentamos para trabajar con un ordenador, es conveniente tomar una postura adecuada: regular la altura del asiento, la mesa, el apoyo lumbar y el respaldo, apoyar el antebrazo cuando escribimos con el teclado o manejamos el ratón, regular la inclinación y altura de la pantalla… </p>
+<p>Además, al utilizar los dispositivos eléctricos, debemos: </p>
+<ol>
+<li>Leer los manuales de instrucciones de uso de todos los componentes eléctricos. </li>
+<li>Mantener los componentes eléctricos en buen estado. </li>
+<li>Desconectar los componentes de la red eléctrica cuando no vayan a ser utilizados. </li>
+<li>Disponer de una instalación eléctrica adecuada para nuestros sistemas y que permita evitar accidentes ante corrientes excesivas o derivaciones. </li>
+<li>Manejar  correctamente  y  con  los  medios  necesarios  los  dispositivos  sensitivos  a descargas eléctricas. </li>
+<li>Evitar manipular los componentes con las manos mojadas o húmedas. </li>
+<li>Cuando  se  acceda  al  interior  de  los  dispositivos  eléctricos,  estos  deben  estar desconectados de la red eléctrica. </li>
+<li>No desplazar equipos no portables cuando están en funcionamiento. </li>
+</ol>
+<p><strong>RECOMENDACIONES:</strong> </p>
+<ul>
+<li>El teclado ha de estar situado como mínimo a 10 cm de distancia desde el borde de la mesa. </li>
+<li>El ratón debe estar cerca del teclado. </li>
+<li>La pantalla debe estar a una distancia mínima de 40 cm. </li>
+<li>La silla debe permitir tener un apoyo completo lumbar y ser regulable. </li>
+<li>Mantener una postura erguida, con las rodillas a la altura de la pelvis y los brazos apoyados. </li>
+</ul>
+<h2 id="secuencia-de-montaje">Secuencia de Montaje<a class="headerlink" href="#secuencia-de-montaje" title="Permanent link">¶</a></h2>
+<h3 id="apertura-de-la-caja">Apertura de la caja<a class="headerlink" href="#apertura-de-la-caja" title="Permanent link">¶</a></h3>
+<p>Los chasis de las computadoras se producen en diversos factores de forma. Los factores de forma hacen referencia al <strong>tamaño</strong> y a la <strong>forma</strong> del chasis. </p>
+<p>Existen diferentes métodos para abrir los chasis. Para conocer cómo abrir un chasis específico, consulte el manual del usuario o el sitio Web del fabricante. La mayoría de los chasis se abren de una de las siguientes formas: </p>
+<ul>
+<li>Se puede retirar la carcasa del chasis en una sola pieza. </li>
+<li>Se pueden retirar los paneles superiores y laterales del chasis. </li>
+<li>Es posible que deba retirar la parte superior del chasis antes de poder retirar las tapas laterales. </li>
+</ul>
+<h3 id="instalacion-de-la-fuente">Instalación de la fuente<a class="headerlink" href="#instalacion-de-la-fuente" title="Permanent link">¶</a></h3>
+<p>Es posible que un técnico deba reemplazar o instalar la fuente de energía. La mayoría de las fuentes de energía se pueden colocar de una única forma en el chasis de la computadora. En general, hay tres o cuatro tornillos que sujetan la fuente de energía al chasis.  Las  fuentes  de  energía  tienen  ventiladores  que  pueden  vibrar  y  aflojar  los tornillos que no están asegurados. Al instalar una fuente de energía, asegúrese de que se utilicen todos los tornillos y de que estén ajustados correctamente. </p>
+<p>Éstos son los pasos que se deben seguir para la instalación de la fuente de energía: </p>
+<ul>
+<li>Insertar la fuente de energía en el chasis. </li>
+<li>Alinear los orificios de la fuente de energía con los del chasis.  </li>
+<li>Asegurar la fuente de energía en el chasis con los tornillos adecuados. </li>
+</ul>
+<h3 id="instalacion-de-la-placa-base">Instalación de la Placa base<a class="headerlink" href="#instalacion-de-la-placa-base" title="Permanent link">¶</a></h3>
+<p>Lo  primero  es  instalar  componentes  en  la  motherboard  y  después  instalar  la motherboard en el chasis de la computadora. </p>
+<ol>
+<li>Instalación de una CPU y ensamblado de un disipador de calor o ventilador. </li>
+</ol>
+<p>La CPU y el disipador de calor o ventilador se pueden instalar en la placa base antes de colocarla en el chasis de la computadora. </p>
+<p>La CPU y la placa son sensibles a las descargas electrostáticas. Al manipular una CPU y una placa, asegúrese de colocarlas sobre una alfombrilla antiestática con descarga a tierra. Al trabajar con estos componentes, debe usar una pulsera antiestática. </p>
+<p><strong>PRECAUCIÓN</strong>:  Al  manipular una  CPU,  no  toque  los  contactos  de  la  CPU  en ningún momento.  <img alt="" src="021.png"/></p>
+<p>La CPU se sujeta al socket de la motherboard con un  dispositivo de sujeción. En la actualidad, los sockets de  la  CPU  son  de  tipo  <strong>LGA</strong>  (Land  Grid  Array,  los  más  modernos) en los que el propio socket incluye los pines  en vez de hacerlo la pastilla del microprocesador.   </p>
+<p>Se debe colocar pasta térmica en la superficie del micro que irá en contacto con el disipador para facilitar su función.  </p>
+<p>Cuando instale una CPU usada, limpie la CPU y la base del disipador de calor con <strong>alcohol isopropílico</strong>. De esta forma, eliminará todos los restos del compuesto térmico anterior. Una  vez  que  las  superficies  estén  listas  para  la  aplicación  de  una  nueva  capa  de compuesto  térmico,  siga  las  instrucciones  del  fabricante  sobre  la  aplicación  del compuesto térmico. </p>
+<p>El  disipador  de  calor  remueve  el  calor de  la  CPU.  El  ventilador  mueve  el  calor  del disipador hacia el exterior. </p>
+<p>Siga  estas  instrucciones  para  instalar  la  CPU  y  ensamblar  el  disipador  de  calor  o ventilador: </p>
+<p>1) Alinee la CPU de modo que el indicador de la Conexión 1 coincida con el Pin 1 del socket de la CPU. De esta forma, garantizará que las muescas de orientación de la CPU estén alineadas con las flechas de orientación del socket de la CPU. 
+1) Conecte suavemente la CPU en el socket. 
+1) Cierre la placa de carga de la CPU y fíjela. Para ello, cierre la palanca de carga y muévala por debajo de la pestaña de retención de la palanca. 
+1) Aplique una pequeña cantidad de compuesto térmico a la CPU y distribúyalo de forma pareja. Siga las instrucciones de aplicación del fabricante.<br/>
+1) Alinee los dispositivos de retención del ensamblado del disipador de calor o ventilador con los orificios de la placa base. 
+1) Coloque el ensamblaje del disipador de calor o ventilador en el socket de la CPU. Tenga cuidado para no apretar los cables del ventilador de la CPU. 
+1) Ajuste  los dispositivos  de  retención  del  ensamblaje del  disipador  de  calor o ventilador para mantenerlo en su lugar. 
+2. Instalación de la memoria </p>
+<p>Colocar  la  memoria  RAM  en  la  motherboard  antes  de  colocarla  en  el  chasis  de  la computadora.  Antes  de  instalar  un  módulo  de  memoria,  consulte  el  manual  de  la motherboard o el sitio Web del fabricante para asegurarse de que la memoria RAM sea compatible.  </p>
+<p>Para instalar la memoria RAM, siga estos pasos: </p>
+<p>1) Alinee las muescas del módulo de  memoria RAM con las flechas de la  ranura y presione la memoria RAM  hasta  que  las  pestañas  laterales  estén en su lugar.   <img alt="" src="022.png"/>
+2) Asegúrese  de  que  las  pestañas  laterales traben en el módulo RAM.  Haga  una  inspección  visual  para  determinar  la  existencia  de  contactos expuestos. <br/>
+3) Para  montar  la  motherboard  y  evitar que  entre en  contacto  con las  piezas  metálicas  del  chasis,  se  utilizan soportes  de  plástico  o metal.  Solamente  se deben  colocar  los  soportes  que coincidan  con  los  orificios  de  la  motherboard.  La  instalación  de  soportes adicionales puede impedir que la motherboard quede colocada correctamente en el chasis. 
+3. Instalación de la motherboard Siga los siguientes pasos: 
+1) Instale los soportes en el chasis de la computadora.<br/>
+1) Alinee los conectores de E/S de la parte trasera de la motherboard con las aberturas de la parte trasera del chasis.<br/>
+1) Alinee los orificios para tornillos de la motherboard con los soportes.<br/>
+1) Coloque todos los tornillos de la motherboard. 
+1) Ajuste todos los tornillos de la motherboard. 
+4. Instalación de Unidades externas </p>
+<p>Las unidades que se instalan en los compartimientos internos se denominan unidades internas. Una unidad de disco duro (HDD, hard disk drive) constituye un ejemplo de una unidad interna. </p>
+<h3 id="instalacion-de-un-disco-duro">Instalación de un Disco Duro<a class="headerlink" href="#instalacion-de-un-disco-duro" title="Permanent link">¶</a></h3>
+<p>1) Coloque la HDD de modo que quede alineada con el compartimiento de la unidad de 3,5 in. 
+1) Inserte la HDD en el compartimiento de la unidad de modo que los orificios para tornillos de la unidad coincidan con los del chasis. 
+1) Asegure la HDD en el chasis con los tornillos adecuados. </p>
+<p>Una unidad óptica es un dispositivo de almacenamiento que lee y escribe información en CD y DVD. El conector de alimentación <strong>Molex</strong> suministra energía a la unidad óptica desde la fuente de energía. El cable <strong>PATA</strong> conecta la unidad óptica a la motherboard. </p>
+<ul>
+<li>Para instalar la unidad óptica, siga estos pasos:</li>
+<li>Coloque la unidad óptica de modo que quede alineada con el compartimiento de la unidad de 5,25 in. </li>
+<li>Inserte la unidad óptica en el compartimiento de la unidad de modo que los orificios para tornillos de la unidad óptica coincidan con los del chasis. </li>
+<li>Asegure la unidad óptica en el chasis con los tornillos adecuados. </li>
+</ul>
+<h3 id="instalacion-de-tarjetas">Instalación de Tarjetas<a class="headerlink" href="#instalacion-de-tarjetas" title="Permanent link">¶</a></h3>
+<h4 id="tarjeta-de-red">Tarjeta de red<a class="headerlink" href="#tarjeta-de-red" title="Permanent link">¶</a></h4>
+<h4 id="_1"><img alt="" src="026.png"/><a class="headerlink" href="#_1" title="Permanent link">¶</a></h4>
+<p>La tarjeta de red o NIC (Network Interface Controller) permite que la computadora se conecte a  una red. Utiliza ranuras de expansión PCI y PCIe  en la motherboard. </p>
+<p>Para instalar la NIC, siga los siguientes pasos:</p>
+<ul>
+<li>Alinee la NIC con la ranura de expansión  correspondiente de la motherboard.</li>
+<li>Presione suavemente la NIC hasta que la tarjeta quede colocada correctamente.</li>
+<li>Asegure la consola de montaje de la NIC para PC en el chasis con el tornillo adecuado. </li>
+</ul>
+<h4 id="tarjeta-de-video">Tarjeta de video<a class="headerlink" href="#tarjeta-de-video" title="Permanent link">¶</a></h4>
+<p>Una tarjeta adaptadora de vídeo es la interfaz entre una computadora y un monitor. Una  tarjeta  adaptadora  de  vídeo  actualizada  proporciona una mayor  resolución  de gráficos para juegos y programas de presentación. Las tarjetas adaptadoras de vídeo utilizan ranuras de expansión PCI, AGP y PCIe en la motherboard.</p>
+<p>Para instalar la tarjeta adaptadora de vídeo, siga estos pasos:</p>
+<p>1) Alinee  la  tarjeta  adaptadora  de  vídeo  con  la  ranura  de  expansión correspondiente de la motherboard. 
+1) Presione suavemente la tarjeta adaptadora de vídeo hasta que la tarjeta quede colocada correctamente.
+1) Asegure la consola de montaje para PC de la tarjeta adaptadora de vídeo en el chasis con el tornillo adecuado. </p>
+<h3 id="cables-internos-conexiones-de-alimentacion-de-la-motherboard">Cables internos: conexiones de alimentación de la motherboard.<a class="headerlink" href="#cables-internos-conexiones-de-alimentacion-de-la-motherboard" title="Permanent link">¶</a></h3>
+<p>Al  igual  que  otros  componentes,  las  motherboards  necesitan  electricidad  para funcionar.  El  conector  de  alimentación  de  tecnología  avanzada  extendida  (ATX, Advanced Technology Extended) tiene 20 o 24 pines. Además, la fuente de energía puede tener un conector de alimentación auxiliar (AUX) de 4 o 6 pines que se conecta a la motherboard.</p>
+<p>Para instalar el cable de alimentación de la motherboard, siga estos pasos:</p>
+<ul>
+<li>Alinee el conector de alimentación ATX de 20 pines con el socket de la motherboard.  Presione suavemente el conector hasta que el clip esté en su lugar. </li>
+<li>Alinee el conector de alimentación AUX de 4 pines con el socket de la motherboard.  Presione suavemente el conector hasta que el clip esté en su lugar.</li>
+</ul>
+<p>Para instalar el cable de alimentación del micro</p>
+<ul>
+<li>Alinee el conector de alimentación de 4 pines con el socket.  Presione suavemente el conector hasta que el clip esté en su lugar.</li>
+</ul>
+<p>Para instalar el cable de alimentación del ventilador del micro.</p>
+<ul>
+<li>Alinee el conector de alimentación del ventilador (normalmente de 3 pines).  Insértelo en su lugar.</li>
+</ul>
+<h3 id="conectores-de-alimentacion-sata">Conectores de alimentación SATA<a class="headerlink" href="#conectores-de-alimentacion-sata" title="Permanent link">¶</a></h3>
+<p>Los conectores de alimentación SATA utilizan un conector de 15 pines. Los conectores de alimentación SATA se utilizan para conectarse a discos duros, unidades ópticas o cualquier dispositivo que tenga un socket de alimentación SATA.</p>
+<h3 id="conectores-de-alimentacion-molex">Conectores de alimentación Molex<a class="headerlink" href="#conectores-de-alimentacion-molex" title="Permanent link">¶</a></h3>
+<p>Los discos duros y las unidades ópticas que no tienen sockets de alimentación SATA utilizan conector de alimentación Molex.</p>
+<blockquote>
+<p>PRECAUCIÓN: No utilice un conector Molex y un conector de alimentación SATA en la misma unidad al mismo tiempo.</p>
+</blockquote>
+<h3 id="conectores-de-alimentacion-berg">Conectores de alimentación Berg<a class="headerlink" href="#conectores-de-alimentacion-berg" title="Permanent link">¶</a></h3>
+<p>Tiene 4 pines y suministran electricidad a las unidades de disquete.</p>
+<p>Instalación de conectores de alimentación</p>
+<ul>
+<li>
+<p>Conecte el conector de alimentación SATA a la HDD.</p>
+</li>
+<li>
+<p>Conecte el conector de alimentación Molex a la unidad óptica.  Conecte el conector de alimentación Berg de 4 pines a la FDD.</p>
+</li>
+<li>
+<p>Conecte los cables adicionales del chasis a los conectores correcpondientes, según las instrucciones del manual de la motherboard (ventiladores de caja, alimentación de tarjeta gráfica...).</p>
+</li>
+</ul>
+<h3 id="cables-datos">Cables datos<a class="headerlink" href="#cables-datos" title="Permanent link">¶</a></h3>
+<h4 id="cables-de-datos-pata-ide">Cables de datos PATA (IDE)<a class="headerlink" href="#cables-de-datos-pata-ide" title="Permanent link">¶</a></h4>
+<p>A menudo, el cable PATA se denomina cable plano debido a que es ancho y plano. Además, el cable PATA puede tener 40 u 80 conductores. Generalmente, un cable PATA tiene tres conectores de 40 pines. En el extremo del cable, hay un conector que se conecta a la motherboard. Los otros dos conectores se conectan a las unidades. Si se instalan varios discos duros, la unidad principal se conectará al conector del extremo del cable. La unidad secundaria se conectará al conector intermedio. </p>
+<p>El revestimiento del cable de datos indica el pin 1. Conecte el cable PATA a la unidad con el indicador del pin 1 del cable alineado con el indicador del pin 1 del conector de la unidad. El indicador del pin 1 del conector de la unidad generalmente se encuentra más cerca del conector de alimentación de la unidad. </p>
+<h4 id="cables-de-datos-sata">Cables de datos SATA<a class="headerlink" href="#cables-de-datos-sata" title="Permanent link">¶</a></h4>
+<p>El cable de datos SATA cuenta con un conector de 7 pines. Un extremo del cable se conecta a la motherboard. El otro extremo se conecta a cualquier unidad que cuente con un conector de datos SATA. </p>
+<h4 id="cables-de-datos-de-unidad-de-disquete">Cables de datos de unidad de disquete<a class="headerlink" href="#cables-de-datos-de-unidad-de-disquete" title="Permanent link">¶</a></h4>
+<p>El cable de datos de unidad de disquete cuenta con un conector de 34 pines. Un cable de unidad de disquete generalmente cuenta con tres conectores de 34 pines. En el extremo del cable, hay un conector que se conecta a la motherboard. Los otros dos conectores se conectan a las unidades. Si se instalan varias unidades de disquete, la unidad A: se conectará al conector del extremo. La unidad B se conectará al conector intermedio. </p>
+<blockquote>
+<p>NOTA: Si el pin 1 del cable de datos de la unidad de disquete no está alineado con el pin 1 del conector de la unidad, la unidad de disquete no funcionará. La falta de alineación no  dañará  la  unidad.  Sin  embargo,  la  luz  de  actividad  de  la  unidad  se  encenderá continuamente.  Para  solucionar  este  problema,  apague  la  computadora  y  vuelva  a conectar el cable de datos para que el pin 1 del cable y el pin 1 del conector estén alineados. Reinicie la computadora. </p>
+</blockquote>
+<h3 id="cables-del-panel-frontal">Cables del Panel frontal<a class="headerlink" href="#cables-del-panel-frontal" title="Permanent link">¶</a></h3>
+<p>Los cables que provienen del frontal de la caja deben conectarse en su correspondiente conector de la placa base. Estos cables suelen venir separados y cada uno de ellos deberá conectarse en los pines adecuados. </p>
+<p>El  manual  de  la  placa  base  proporciona  información  sobre  la  posición  correcta  de colocación. </p>
+<p>[[Preguntas_Moodle]]</p>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.19047be9.min.js"></script>
+<script src="../../javascripts/mathjax.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</body>
+</html>
