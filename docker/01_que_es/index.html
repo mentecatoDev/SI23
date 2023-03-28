@@ -5,17 +5,17 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="../capas/" rel="prev"/>
-<link href="../docker_hub/" rel="next"/>
-<link href="../../../assets/images/favicon.png" rel="icon"/>
+<link href="../00_TOC/" rel="prev"/>
+<link href="../02_instalacion/" rel="next"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.4" name="generator"/>
-<title>Contenedores - obsidian-mkdocs template</title>
-<link href="../../../assets/stylesheets/main.240905d7.min.css" rel="stylesheet"/>
-<link href="../../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
+<title>¿Qué es Docker y para qué se utiliza? [[1](http://apuntes.ucr.ac.cr/index.php/Docker,_aplicaciones_en_cualquier_parte)] - obsidian-mkdocs template</title>
+<link href="../../assets/stylesheets/main.240905d7.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
 <body data-md-color-accent="indigo" data-md-color-primary="pink" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
@@ -23,7 +23,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#contenedores">
+<a class="md-skip" href="#que-es-docker-y-para-que-se-utiliza-1">
           Skip to content
         </a>
 </div>
@@ -31,7 +31,7 @@
 </div>
 <header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="obsidian-mkdocs template" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="obsidian-mkdocs template">
+<a aria-label="obsidian-mkdocs template" class="md-header__button md-logo" data-md-component="logo" href="../.." title="obsidian-mkdocs template">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -47,7 +47,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Contenedores
+              ¿Qué es Docker y para qué se utiliza? [[1](http://apuntes.ucr.ac.cr/index.php/Docker,_aplicaciones_en_cualquier_parte)]
             
           </span>
 </div>
@@ -103,14 +103,14 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="obsidian-mkdocs template" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="obsidian-mkdocs template">
+<a aria-label="obsidian-mkdocs template" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="obsidian-mkdocs template">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
 </a>
     obsidian-mkdocs template
   </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../..">
+<a class="md-nav__link" href="../..">
         Obsidian Notes
       </a>
 </li>
@@ -127,17 +127,17 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Features/LaTeX%20Math%20Support/">
+<a class="md-nav__link" href="../../Features/LaTeX%20Math%20Support/">
         LaTeX Math Support
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Features/Mermaid%20Diagrams/">
+<a class="md-nav__link" href="../../Features/Mermaid%20Diagrams/">
         Mermaid diagrams
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Features/Text%20Formatting/">
+<a class="md-nav__link" href="../../Features/Text%20Formatting/">
         Text Formatting
       </a>
 </li>
@@ -157,12 +157,12 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Topic%201/Note%201/">
+<a class="md-nav__link" href="../../Topic%201/Note%201/">
         Note 1
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../Topic%201/Note%202/">
+<a class="md-nav__link" href="../../Topic%201/Note%202/">
         Note 2
       </a>
 </li>
@@ -172,43 +172,11 @@
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
 <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-          Docs
+          Docker
           <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_4">
-<span class="md-nav__icon md-icon"></span>
-          Docs
-        </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../">
-        Sistemas Informáticos
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../01_introduccion_sistemas_informaticos/">
-        Introducción a los Sistemas Informáticos
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../02_introduccion_sistemas_operativos/">
-        Introducción a los Sistemas Operativos
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../03_virtualizacion/">
-        Arranque de un Sistema Operativo
-      </a>
-</li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_4_5" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
-          Docker
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="true" aria-labelledby="__nav_4_5_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_4_5">
 <span class="md-nav__icon md-icon"></span>
           Docker
         </label>
@@ -218,8 +186,9 @@
         00 TOC
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../01_que_es/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<a class="md-nav__link md-nav__link--active" href="./">
         ¿Qué es Docker y para qué se utiliza? [[1](http://apuntes.ucr.ac.cr/index.php/Docker,_aplicaciones_en_cualquier_parte)]
       </a>
 </li>
@@ -243,9 +212,8 @@
         Capas
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../contenedores/">
         Contenedores
       </a>
 </li>
@@ -287,6 +255,38 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Docs
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Docs
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../docs/">
+        Sistemas Informáticos
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../docs/01_introduccion_sistemas_informaticos/">
+        Introducción a los Sistemas Informáticos
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../docs/02_introduccion_sistemas_operativos/">
+        Introducción a los Sistemas Operativos
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../docs/03_virtualizacion/">
+        Arranque de un Sistema Operativo
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -305,14 +305,13 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="contenedores">Contenedores<a class="headerlink" href="#contenedores" title="Permanent link">¶</a></h1>
-<ul>
-<li>Un contenedor es una imagen instanciada (en ejecución).</li>
-<li>Los <strong>contenedores</strong> no tienen un sistema operativo dentro sino que aíslan el espacio de usuario.</li>
-<li>Son muy ligeros porque corren como un proceso sobre el SO del host.</li>
-<li>Los contenedores escalan en función de la demanda, mientras que las Máquinas Virtuales (MV) tienen que ser aprovisionadas de recursos previamente.
-Una imagen de Docker es un archivo compuesto por múltiples capas que se utiliza para ejecutar código en un contenedor de Docker. <a href="https://keepcoding.io/blog/que-es-una-imagen-en-docker/">Estas imágenes son las plantillas base desde la que partimos ya sea para crear una nueva imagen o crear nuevos contenedores para ejecutar las aplicaciones</a></li>
-</ul>
+<h1 id="que-es-docker-y-para-que-se-utiliza-1">¿Qué es Docker y para qué se utiliza? [<a href="http://apuntes.ucr.ac.cr/index.php/Docker,_aplicaciones_en_cualquier_parte">1</a>]<a class="headerlink" href="#que-es-docker-y-para-que-se-utiliza-1" title="Permanent link">¶</a></h1>
+<p><strong>Docker</strong> es una herramienta que puede empaquetar una aplicación y sus dependencias en un contenedor virtual que se puede ejecutar en cualquier servidor Linux. Es muy flexible y portable, de manera que se puede desplegar en infraestructura física, nube privada, nube pública, etc. Actualmente es soportado también por sistemas como Windows y macOS.</p>
+<p><a href="http://apuntes.ucr.ac.cr/index.php/Archivo:Virtual-machine.png"><img alt="" src="http://apuntes.ucr.ac.cr/images/1/19/Virtual-machine.png"/></a></p>
+<p>Arquitectura de una máquina virtual</p>
+<p><a href="http://apuntes.ucr.ac.cr/index.php/Archivo:Docker-container.png"><img alt="" src="http://apuntes.ucr.ac.cr/images/d/d3/Docker-container.png"/></a></p>
+<p>Arquitectura de un contenedor Docker, donde el kernel del anfitrión es compartido</p>
+<p>Es virtualización a nivel de sistema operativo que, a diferencia de otros tipos como emulación (VirtualBox), paravirtualización (Xen), o virtualización completa (VMWare, KVM), comparten el kernel o núcleo del anfitrión lo que lo hace más ligero.</p>
 </article>
 </div>
 </div>
@@ -335,9 +334,9 @@ Una imagen de Docker es un archivo compuesto por múltiples capas que se utiliza
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../../../assets/javascripts/bundle.19047be9.min.js"></script>
-<script src="../../../javascripts/mathjax.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.19047be9.min.js"></script>
+<script src="../../javascripts/mathjax.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
